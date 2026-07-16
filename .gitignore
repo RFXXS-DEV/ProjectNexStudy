@@ -1,36 +1,62 @@
-# Ambiente virtual
-venv/
-.env
-
+# ===========================
 # Python
+# ===========================
+
+venv/
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+*.pyc
 
-# VS Code
-.vscode/
+# Variáveis de ambiente
+.env
+.env.*
 
-# Arquivos do sistema
-.DS_Store
-Thumbs.db
+# ===========================
+# Flask
+# ===========================
 
-# Logs
-*.log
+instance/
+.flaskenv
 
-# Tailwind / Node
+# ===========================
+# Node.js / Tailwind
+# ===========================
+
 node_modules/
 
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===========================
+# VS Code
+# ===========================
+
+.vscode/
+
+# ===========================
+# Sistema Operacional
+# ===========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===========================
 # Arquivos temporários
+# ===========================
+
 *.tmp
 *.temp
+*.log
 
-# Pytest (caso use no futuro)
+# ===========================
+# Testes (caso use futuramente)
+# ===========================
+
 .pytest_cache/
-
-# Cache do Flask
-instance/
-
-# Arquivos de ambiente
-.env.local
-.env.production
+.coverage
+htmlcov/
