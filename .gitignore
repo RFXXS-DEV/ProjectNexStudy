@@ -1,0 +1,36 @@
+# Ambiente virtual
+venv/
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VS Code
+.vscode/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Tailwind / Node
+node_modules/
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Pytest (caso use no futuro)
+.pytest_cache/
+
+# Cache do Flask
+instance/
+
+# Arquivos de ambiente
+.env.local
+.env.production
