@@ -9,8 +9,67 @@
 </head>
 <body class="min-h-screen m-0 p-0 bg-green-200">
 
-    
+        <main class="flex">
 
+            
+            <section class="bg-white w-1/2 h-screen">
+
+                <img 
+                src="{{ url_for('static', filename='img/FundoLoginCadastro.jpg') }}"
+                alt="Fundo"
+                class="w-full h-full object-cover">
+
+            </section>
+
+
+            
+            <section class="flex flex-col w-1/2 h-screen justify-center items-center border-2 border-black">
+
+                
+                <img src="{{ url_for('static', filename='img/LogoNexStudy.png') }}" alt=""
+                class="w-xl border-2 border-black ">
+
+                
+                <h1>Bem-vindo ao NexStudy</h1>
+
+
+                <form class=" flex-row border-2 border-black">
+
+                    
+                    <div>
+                        <input type="text" placeholder="Nome">
+                    </div>
+
+                    
+                    <div>
+                        <input type="email" placeholder="E-mail">
+                    </div>
+
+                    
+                    <div>
+                        <input type="password" placeholder="Senha">
+                    </div>
+
+                    
+                    <div>
+                        <input type="password" placeholder="Confirmar senha">
+                    </div>
+
+                    
+                    <button>
+                        Criar conta
+                    </button>
+
+                </form>
+
+                <p>
+                    Já possui conta?
+                    <a href="">Entrar</a>
+                </p>
+
+            </section>
+
+        </main>
 
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
