@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+    <title>SideBarReutilizavel</title>
+</head>
+<body class="bg-zinc-100">
+
+    <main class="flex min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-80 bg-white rounded-2xl border-2 p-1.5 m-3">
+            Sidebar
+        </aside>
+
+        <!-- Conteúdo -->
+        <section class="flex-1">
+
+            <!-- Navbar -->
+            <header class="h-20 border-b bg-white">
+                Navbar
+            </header>
+
+            <!-- Conteúdo -->
+            <main class="p-8">
+                Conteúdo
+            </main>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

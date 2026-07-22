@@ -38,5 +38,9 @@ def configuracoes():
 def ajuda():
     return render_template("ajuda.html")
 
+@app.route("/sidebar")
+def sidebar():
+    return render_template("sideBar.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

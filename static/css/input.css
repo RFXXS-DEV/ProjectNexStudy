@@ -1,4 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-dancing: "Dancing Script", cursive;
+  --font-bevan: "Bevan", serif;
+  --font-slabo: "Slabo 27px", serif;
+}
+
 @source "../../../templates";
 @source "../js";
