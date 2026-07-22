@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Slabo+27px&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+
+    <title>Login-NexStudy</title>
+
+
+</head>
+<body>
+
+    <body class="min-h-screen">
+
+    <!-- Página inteira -->
+    <main class="flex min-h-screen">
+
+        <!-- ========================================= -->
+        <!-- LADO ESQUERDO - IMAGEM -->
+        <!-- ========================================= -->
+        <section class="w-1/2 h-screen">
+
+            <img
+                src="{{ url_for('static', filename='img/FundoLogin.jpg') }}"
+                alt="Imagem de fundo"
+                class="w-full h-full object-cover">
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- LADO DIREITO -->
+        <!-- ========================================= -->
+        <section class="w-1/2 h-screen flex items-center justify-center bg-green-200">
+
+            <!-- Container principal -->
+            <div class="w-full max-w-md px-0 flex flex-col items-center">
+
+                <!-- Logo -->
+                <img
+                    src="{{ url_for('static', filename='img/LogoNexStudy.png') }}"
+                    alt="Logo NexStudy"
+                    class="w-48 mb-0">
+
+                <!-- Título -->
+                <h1 class="text-6xl text-green-700 mb-4 font-dancing border-b-2">
+                    Bem-vindo de volta
+                </h1>
+
+                <!-- ================================= -->
+                <!-- FORMULÁRIO -->
+                <!-- ================================= -->
+
+                <form
+                    action=""
+                    method="POST"
+                    class="w-full flex flex-col gap-3">
+
+                    <!-- Email -->
+                    <div class="relative">
+                        <img
+                            src="{{ url_for('static', filename='icons/IconeEmail(Light).png') }}"
+                            alt="Ícone Email"
+                            class="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6">
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="E-mail"
+                            required
+                            class="w-full h-16 pl-14 pr-4 text-lg rounded-2xl border bg-white cursor-pointer font-semibold focus:text-green-700 focus:transition focus:duration-400 border-gray-300 focus:outline-none focus:cursor-text focus:ring-2 focus:ring-green-500">
+                    </div>
+
+                    <!-- Senha -->
+                    <div class="relative">
+                        <img
+                            src="{{ url_for('static', filename='icons/IconeSenha(Light).png') }}"
+                            alt="Ícone Senha"
+                            class="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6">
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Senha"
+                            required
+                            class="w-full h-16 pl-14 pr-14 text-lg rounded-2xl border bg-white cursor-pointer font-semibold focus:text-green-700 focus:transition focus:duration-400 border-gray-300 focus:outline-none focus:cursor-text focus:ring-2 focus:ring-green-500">
+
+                        <img
+                            id="olhoSenha"
+                            src="{{ url_for('static', filename='icons/IconeOlhoFechado(Light).png') }}"
+                            alt="Mostrar senha"
+                            class="absolute right-5 top-1/2 -translate-y-1/2 w-6 h-6 cursor-pointer">
+                    </div>
+
+                    <!-- Esqueci minha senha -->
+                    <div class="flex justify-end">
+                        <a
+                            href="#"
+                            class="text-sm text-green-800 font-semibold hover:underline">
+
+                            Esqueci minha senha
+
+                        </a>
+                    </div>
+
+                    <!-- Botão -->
+                    <button
+                        type="submit"
+                        class="w-full h-16 mt-2 text-lg rounded-2xl bg-green-700 text-white font-semibold hover:bg-green-800 transition duration-200 cursor-pointer">
+
+                        Entrar
+
+                    </button>
+
+                </form>
+
+                <!-- Link -->
+                <p class="mt-6 text-sm text-gray-600">
+
+                    Ainda não possui conta?
+
+                    <a
+                        href="{{ url_for('cadastro') }}"
+                        class="text-green-900 font-semibold hover:underline">
+
+                        Criar conta
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+</body>
+    
+</body>
+</html>
