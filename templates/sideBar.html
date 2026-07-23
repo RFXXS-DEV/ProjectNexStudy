@@ -3,30 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Slabo+27px&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
     <title>SideBarReutilizavel</title>
 </head>
-<body class="bg-zinc-100">
+<body class="min-h-screen bg-green-200">
 
+    <!-- Layout -->
     <main class="flex min-h-screen">
 
-        <!-- Sidebar -->
-        <aside class="w-80 bg-white rounded-2xl border-2 p-1.5 m-3">
-            Sidebar
+        <!-- ========================================= -->
+        <!-- SIDEBAR -->
+        <!-- ========================================= -->
+
+        <aside class="m-5 w-64 rounded-3xl bg-[#288352] flex flex-col justify-between p-5">
+
+            <!-- Logo -->
+            <div>
+
+                <div class="flex items-center gap-3 mb-12">
+
+                    <img
+                        src="{{ url_for('static', filename='img/LogoNexStudy.png') }}"
+                        alt="Logo"
+                        class="w-8 h-8">
+
+                    <h1 class="text-white font-mono text-lg">
+                        NexStudy
+                    </h1>
+
+                </div>
+
+
+                <!-- Menu -->
+
+                <nav class="space-y-2">
+
+                    <a href="#"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl bg-[#429957] hover:bg-[#429957] text-white font-inter transition">
+
+                        <img
+                            src="{{ url_for('static', filename='icons/IconeDashboard(Dark).png') }}"
+                            alt="Dashboard"
+                            class="w-5 h-5">
+
+                        Dashboard
+
+                    </a>
+
+                    <a href="#"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-white font-inter hover:bg-[#429957] transition">
+
+                        <img
+                            src="{{ url_for('static', filename='icons/IconeDisciplinas(Dark).png') }}"
+                            alt="Disciplinas"
+                            class="w-5 h-5">
+
+                        Minhas Disciplinas
+
+                    </a>
+
+                    <a href="#"
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-white font-inter hover:bg-[#429957] transition">
+
+                        <img
+                            src="{{ url_for('static', filename='icons/IconeTimer(Dark).png') }}"
+                            alt="Relógio"
+                            class="w-5 h-5">
+
+                        Relógio
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+
+            <!-- Rodapé -->
+
+            <nav class="space-y-2">
+
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-white font-inter hover:bg-[#429957] transition">
+
+                    <img
+                        src="{{ url_for('static', filename='icons/IconeSettings(Dark).png') }}"
+                        alt="Configurações"
+                        class="w-5 h-5">
+
+                    Configurações
+
+                </a>
+
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-white font-inter hover:bg-[#429957] transition">
+
+                    <img
+                        src="{{ url_for('static', filename='icons/IconeHelp(Dark).png') }}"
+                        alt="Ajuda"
+                        class="w-5 h-5">
+
+                    Centro de Ajuda
+
+                </a>
+
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-white font-inter hover:bg-[#429957] transition">
+
+                    <img
+                        src="{{ url_for('static', filename='icons/IconeLogout(Dark).png') }}"
+                        alt="Sair"
+                        class="w-5 h-5">
+
+                    Sair
+
+                </a>
+
+            </nav>
+
         </aside>
 
-        <!-- Conteúdo -->
-        <section class="flex-1">
+
+
+        <!-- ========================================= -->
+        <!-- CONTEÚDO -->
+        <!-- ========================================= -->
+
+        <section class="flex-1 p-6">
 
             <!-- Navbar -->
-            <header class="h-20 border-b bg-white">
-                Navbar
-            </header>
 
-            <!-- Conteúdo -->
-            <main class="p-8">
-                Conteúdo
-            </main>
+            <header class="flex items-center justify-between">
+
+                <!-- Pesquisa -->
+
+                <div class="w-1/6 h-15 bg-white rounded-full flex items-center px-5 gap-4 shadow-sm">
+
+                    <img
+                        src="{{ url_for('static', filename='icons/IconeSearch(Light).png') }}"
+                        alt="Pesquisar"
+                        class="w-5 h-5">
+
+                    <input
+                        type="text"
+                        placeholder="Pesquise matérias"
+                        class="w-full outline-none bg-transparent font-mono text-sm placeholder:text-gray-400">
+
+                </div>
+
+
+
+                <!-- Botões -->
+
+                <div class="flex items-center gap-4">
+
+                    <button
+                        class="w-15 h-15 bg-white rounded-full flex items-center justify-center shadow-sm hover:scale-105 transition">
+
+                        <img
+                            src="{{ url_for('static', filename='icons/IconeDarkMode(Light).png') }}"
+                            alt="Tema"
+                            class="w-6 h-6">
+
+                    </button>
+                    <div class="bg-white flex items-center justify-center gap-4 w-35 h-15 rounded-full">
+                        <button
+                            class="w-15 h-15 bg-white rounded-full flex items-center justify-center shadow-sm hover:scale-105 transition">
+
+                            <img
+                                src="{{ url_for('static', filename='icons/IconeNotification(Light).png') }}"
+                                alt="Notificações"
+                                class="w-6 h-6">
+
+                        </button>
+
+                        <button
+                            class="w-15 h-15 bg-white rounded-full flex items-center justify-center hover:shadow-sm transition">
+
+                            <img
+                                src="{{ url_for('static', filename='icons/IconePerson(Light).png') }}"
+                                alt="Perfil"
+                                class="w-6 h-6 rounded-full">
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </header>
 
         </section>
 
