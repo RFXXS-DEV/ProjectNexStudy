@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("dashboard.html")  # ou "index.html", se você criar uma
+    return render_template("login.html")  # ou "index.html", se você criar uma
 
 @app.route("/login")
 def login():
@@ -37,10 +37,6 @@ def configuracoes():
 @app.route("/ajuda")
 def ajuda():
     return render_template("ajuda.html")
-
-@app.route("/sidebar")
-def sidebar():
-    return render_template("sideBar.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
