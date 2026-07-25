@@ -1,23 +1,379 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Slabo+27px&display=swap" rel="stylesheet">
-    
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Slabo+27px&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
     <title>Disciplinas</title>
 </head>
+
 <body class="min-h-screen bg-green-200">
 
     <!-- Layout -->
-    <main class="flex max-h-screen">
+    <main class="flex h-screen">
 
-    
+        {% include "components/sidebar.html" %}
 
+        <!-- ========================================= -->
+        <!-- CONTEÚDO DA PÁGINA -->
+        <!-- ========================================= -->
+
+        <section class="flex-1 p-5 flex gap-5 h-full overflow-hidden">
+
+            <!-- ========================================= -->
+            <!-- ÁREA DAS DISCIPLINAS -->
+            <!-- ========================================= -->
+
+            <section class="flex-1 max-h-194 bg-white rounded-3xl shadow-sm p-8 flex flex-col overflow-hidden">
+
+                <!-- Cabeçalho -->
+                <header class="flex justify-between items-center mb-8">
+
+                    <div>
+
+                        <h1 class="text-3xl font-bold text-gray-800">
+                            Minhas Disciplinas
+                        </h1>
+
+                        <p class="text-gray-500 mt-2">
+                            Organize e acompanhe todas as suas matérias.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="bg-[#66D279] hover:bg-[#55c36a] transition-all duration-200 text-white font-semibold px-6 py-3 rounded-2xl shadow hover:scale-105 flex items-center gap-2">
+
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M12 4v16m8-8H4" />
+
+                        </svg>
+
+                        Nova disciplina
+
+                    </button>
+
+                </header>
+
+
+                <!-- ========================================= -->
+                <!-- LISTA DAS DISCIPLINAS -->
+                <!-- APENAS ESTA ÁREA ROLA -->
+                <!-- ========================================= -->
+
+                <div class="flex-1 overflow-y-auto pr-3 flex flex-col gap-6">
+
+
+                    <!-- ======================================================= -->
+                    <!-- DISCIPLINA 1 (FECHADA) -->
+                    <!-- ======================================================= -->
+
+                    <article
+                        class="bg-gray-50 hover:bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+
+                        <div class="h-3 bg-red-500 rounded-t-2xl"></div>
+
+                        <div class="p-6">
+
+                            <div class="flex justify-between items-center">
+
+                                <div>
+
+                                    <h2 class="text-2xl font-bold text-gray-800">
+                                        Matemática
+                                    </h2>
+
+                                    <p class="text-gray-500 mt-1">
+                                        Continue em Funções.
+                                    </p>
+
+                                </div>
+
+                                <button class="text-[#288352] font-semibold hover:underline">
+
+                                    Ver detalhes
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ======================================================= -->
+                    <!-- DISCIPLINA 2 (ABERTA) -->
+                    <!-- ======================================================= -->
+
+                    <article class="bg-white rounded-2xl border-2 border-[#288352] shadow-md">
+
+                        <div class="h-3 bg-[#288352] rounded-t-2xl"></div>
+
+                        <div class="p-6">
+
+                            <!-- Cabeçalho -->
+
+                            <div class="flex justify-between items-center mb-6">
+
+                                <div>
+
+                                    <h2 class="text-2xl font-bold text-gray-800">
+
+                                        Programação Web
+
+                                    </h2>
+
+                                    <p class="text-gray-500 mt-1">
+
+                                        HTML • CSS • Flask
+
+                                    </p>
+
+                                </div>
+
+                                <button class="text-[#288352] font-semibold hover:underline">
+
+                                    Ocultar detalhes
+
+                                </button>
+
+                            </div>
+
+
+                            <!-- Notas -->
+
+                            <div class="grid grid-cols-4 gap-5 mb-8">
+
+                                <div>
+
+                                    <label class="text-sm text-gray-500">
+                                        Nota 1
+                                    </label>
+
+                                    <input type="text" value="9,5"
+                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none">
+
+                                </div>
+
+                                <div>
+
+                                    <label class="text-sm text-gray-500">
+                                        Nota 2
+                                    </label>
+
+                                    <input type="text" value="8,8"
+                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none">
+
+                                </div>
+
+                                <div>
+
+                                    <label class="text-sm text-gray-500">
+                                        Nota 3
+                                    </label>
+
+                                    <input type="text" placeholder="-"
+                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none">
+
+                                </div>
+
+                                <div>
+
+                                    <label class="text-sm text-gray-500">
+                                        Nota 4
+                                    </label>
+
+                                    <input type="text" placeholder="-"
+                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none">
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Estatísticas -->
+
+                            <div class="grid grid-cols-3 gap-6">
+
+                                <div class="bg-green-50 rounded-xl p-4">
+
+                                    <p class="text-gray-500 text-sm">
+                                        Média
+                                    </p>
+
+                                    <h3 class="text-2xl font-bold text-[#288352]">
+                                        9,15
+                                    </h3>
+
+                                </div>
+
+                                <div class="bg-blue-50 rounded-xl p-4">
+
+                                    <p class="text-gray-500 text-sm">
+                                        Horas
+                                    </p>
+
+                                    <h3 class="text-2xl font-bold text-blue-600">
+                                        14h
+                                    </h3>
+
+                                </div>
+
+                                <div class="bg-orange-50 rounded-xl p-4">
+
+                                    <p class="text-gray-500 text-sm">
+                                        Pomodoros
+                                    </p>
+
+                                    <h3 class="text-2xl font-bold text-orange-500">
+                                        31
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ======================================================= -->
+                    <!-- DISCIPLINA 3 (FECHADA) -->
+                    <!-- ======================================================= -->
+
+                    <article
+                        class="bg-gray-50 hover:bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+
+                        <div class="h-3 bg-blue-500 rounded-t-2xl"></div>
+
+                        <div class="p-6">
+
+                            <div class="flex justify-between items-center">
+
+                                <div>
+
+                                    <h2 class="text-2xl font-bold text-gray-800">
+
+                                        História
+
+                                    </h2>
+
+                                    <p class="text-gray-500 mt-1">
+
+                                        Revolução Industrial.
+
+                                    </p>
+
+                                </div>
+
+                                <button class="text-[#288352] font-semibold hover:underline">
+
+                                    Ver detalhes
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================= -->
+            <!-- PAINEL DE ESTATÍSTICAS -->
+            <!-- ========================================= -->
+
+            <aside class="w-80 bg-white max-h-194 rounded-3xl shadow-sm p-8 flex flex-col gap-6">
+
+                <h2 class="text-2xl font-bold text-gray-800">
+
+                    Resumo
+
+                </h2>
+
+                <div class="bg-green-50 rounded-2xl p-5">
+
+                    <p class="text-gray-500">
+                        Disciplinas
+                    </p>
+
+                    <h3 class="text-3xl font-bold text-[#288352]">
+                        3
+                    </h3>
+
+                </div>
+
+                <div class="bg-blue-50 rounded-2xl p-5">
+
+                    <p class="text-gray-500">
+                        Horas estudadas
+                    </p>
+
+                    <h3 class="text-3xl font-bold text-blue-600">
+                        24h
+                    </h3>
+
+                </div>
+
+                <div class="bg-orange-50 rounded-2xl p-5">
+
+                    <p class="text-gray-500">
+                        Média geral
+                    </p>
+
+                    <h3 class="text-3xl font-bold text-orange-500">
+                        8,9
+                    </h3>
+
+                </div>
+
+                <div class="bg-red-50 rounded-2xl p-5">
+
+                    <p class="text-gray-500">
+                        Pomodoros
+                    </p>
+
+                    <h3 class="text-3xl font-bold text-red-500">
+                        54
+                    </h3>
+
+                </div>
+
+                <div class="mt-auto bg-gray-50 rounded-2xl p-5">
+
+                    <h3 class="font-semibold text-gray-700 mb-2">
+                        Próxima meta
+                    </h3>
+
+                    <p class="text-gray-500 text-sm">
+                        Estudar mais <strong>6 horas</strong> esta semana para atingir sua meta semanal.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </section>
 
     </main>
+
 </html>
