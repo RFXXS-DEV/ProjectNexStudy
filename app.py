@@ -36,7 +36,7 @@ def configuracoes():
 
 @app.route("/ajuda")
 def ajuda():
-    return render_template("ajuda.html")
+    return render_template("relogio2.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

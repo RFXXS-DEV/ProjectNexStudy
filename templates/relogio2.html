@@ -21,19 +21,19 @@
             
             <div class="w-full max-w-7xl grid grid-cols-1 xl:grid-cols-12 gap-10 items-center">
                 
-                <div class="xl:col-span-8 flex flex-col items-center justify-center w-full gap-10">
+                <div class="xl:col-span-8 flex flex-col items-center justify-center w-full gap-8">
                     
                     <div class="flex flex-col items-center gap-6 w-full">
                         
                         <div class="bg-white/60 p-1.5 rounded-full inline-flex shadow-sm backdrop-blur-md">
 
-                            <button class="bg-[#a7f3d0] text-[#064e3b] font-bold text-sm rounded-full px-8 py-2.5 shadow-sm transition-all">
+                            <button class="text-gray-500 font-semibold text-sm rounded-full px-8 py-2.5 hover:bg-white/50 transition-all">
 
                                 Relógio
 
                             </button>
 
-                            <button class="text-gray-500 font-semibold text-sm rounded-full px-8 py-2.5 hover:bg-white/50 transition-all">
+                            <button class="bg-[#f87171] text-white font-bold text-sm rounded-full px-8 py-2.5 shadow-md transition-all">
 
                                 Pomodoro
 
@@ -41,11 +41,11 @@
 
                         </div>
 
-                        <div class="flex flex-wrap justify-center gap-4 w-full max-w-xl">
+                        <div class="flex flex-wrap justify-center gap-4 w-full max-w-2xl">
 
                             <div class="relative flex-1 min-w-50">
 
-                                <select class="w-full appearance-none bg-white rounded-2xl px-6 py-3.5 text-gray-700 font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-[#34d399] cursor-pointer">
+                                <select class="w-full appearance-none bg-white/80 backdrop-blur-md rounded-3xl px-6 py-4 text-gray-700 font-semibold shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-white focus:outline-none focus:ring-2 focus:ring-[#f87171] cursor-pointer transition-all">
                                     
                                     <option>Matemática</option>
 
@@ -63,28 +63,23 @@
 
                             </div>
                             
-                            <div class="flex gap-2 min-w-37.5">
+                            <div class="flex bg-white/60 backdrop-blur-md p-1.5 rounded-3xl shadow-sm border border-white min-w-55">
 
-                                <input type="number" value="45" class="w-20 bg-white rounded-2xl px-4 py-3.5 text-center text-gray-700 font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-[#34d399]">
+                                <button class="flex-1 flex items-center justify-center gap-2 text-gray-500 font-bold rounded-2xl px-4 py-2.5 hover:bg-white/50 transition-all">
+                                    
+                                    <span class="text-lg">🍅</span> 
+                                    
+                                    25 / 5
+
+                                </button>
                                 
-                                <div class="relative flex-1">
-
+                                <button class="flex-1 flex items-center justify-center gap-2 bg-[#fecaca] text-[#991b1b] font-bold rounded-2xl px-4 py-2.5 shadow-sm transition-all border border-red-200/50">
                                     
-                                    <select class="w-28 appearance-none bg-[#a7f3d0] text-[#064e3b] rounded-2xl px-4 py-3.5 font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-[#34d399] cursor-pointer">
-                                        
-                                        <option>Minutos</option>
-
-                                        <option>Horas</option>
-
-                                    </select>
-
-                                    <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
-
-                                        <svg class="w-4 h-4 text-[#064e3b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    <span class="text-lg">🍅</span> 
                                     
-                                    </div>
+                                    50 / 10
 
-                                </div>
+                                </button>
 
                             </div>
 
@@ -92,25 +87,27 @@
 
                     </div>
 
-                    <div class="bg-white rounded-[3.5rem] w-full max-w-3xl p-10 md:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col items-center justify-center border border-white/50 relative overflow-hidden">
+                    <div class="bg-white/80 backdrop-blur-2xl rounded-[3rem] w-full max-w-2xl p-8 md:p-12 shadow-[0_20px_50px_rgb(0,0,0,0.05)] border border-white flex flex-col items-center justify-center relative overflow-hidden transition-all hover:shadow-[0_20px_50px_rgb(0,0,0,0.08)]">
                         
-                        <div class="absolute -top-24 -right-24 w-64 h-64 bg-green-50 rounded-full blur-3xl opacity-60"></div>
+                        <div class="absolute -top-24 -right-24 w-64 h-64 bg-linear-to-br from-red-100 to-red-50 rounded-full blur-3xl opacity-70"></div>
                         
-                        <div class="text-[7rem] sm:text-[9rem] md:text-[11rem] font-bold text-[#14532d] leading-none tracking-tighter tabular-nums drop-shadow-sm z-10">
-                            45:00
+                        <img src="https://cdn-icons-png.flaticon.com/512/1202/1202125.png" alt="Tomate Pomodoro" class="w-24 h-24 md:w-28 md:h-28 drop-shadow-xl z-10 mb-2 hover:scale-110 transition-transform duration-300">
+
+                        <div class="text-[5.5rem] sm:text-[7.5rem] md:text-[9.5rem] font-extrabold text-transparent bg-clip-text bg-linear-to-b from-[#ef4444] to-[#b91c1c] leading-none tracking-tighter tabular-nums drop-shadow-sm z-10">
+                            50:00
                         </div>
 
-                        <div class="flex flex-wrap justify-center gap-4 mt-10 z-10">
+                        <div class="flex flex-wrap justify-center gap-4 mt-8 z-10">
 
-                            <button class="bg-[#d1fae5] hover:bg-[#a7f3d0] text-[#065f46] font-bold py-3.5 px-8 rounded-full transition-all flex items-center gap-2">
+                            <button class="bg-white/80 backdrop-blur-sm hover:bg-white text-[#991b1b] font-bold py-3.5 px-8 rounded-full transition-all flex items-center gap-2 shadow-[0_4px_15px_rgb(0,0,0,0.02)] border border-red-50 hover:-translate-y-0.5">
                                 
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                                <svg class="w-5 h-5 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
                                 
                                 Reiniciar
 
                             </button>
                             
-                            <button class="bg-[#34d399] hover:bg-[#10b981] text-white font-bold py-3.5 px-10 rounded-full transition-all flex items-center gap-2 shadow-lg shadow-green-300/50 transform hover:-translate-y-1">
+                            <button class="bg-linear-to-r from-[#34d399] to-[#10b981] hover:from-[#10b981] hover:to-[#059669] text-white font-bold py-3.5 px-10 rounded-full transition-all flex items-center gap-2 shadow-lg shadow-green-400/40 transform hover:-translate-y-1">
                                 
                                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
                                
@@ -118,9 +115,9 @@
                             
                             </button>
                             
-                            <button class="bg-[#d1fae5] hover:bg-[#a7f3d0] text-[#065f46] font-bold py-3.5 px-8 rounded-full transition-all flex items-center gap-2">
+                            <button class="bg-white/80 backdrop-blur-sm hover:bg-white text-[#991b1b] font-bold py-3.5 px-8 rounded-full transition-all flex items-center gap-2 shadow-[0_4px_15px_rgb(0,0,0,0.02)] border border-red-50 hover:-translate-y-0.5">
                                 
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <svg class="w-5 h-5 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 
                                 Pausar
 
@@ -188,7 +185,7 @@
                 </div>
 
             </div>
-
+            
         </div>
         
     </main>
