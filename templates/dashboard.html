@@ -1,574 +1,575 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Slabo+27px&display=swap" rel="stylesheet">
-    
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Slabo+27px&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
     <title>Dashboard</title>
 </head>
+
 <body class="min-h-screen bg-green-200">
 
     <!-- Layout -->
     <main class="flex max-h-screen">
 
-    {% include "components/sidebar.html" %}
+        {% include "components/sidebar.html" %}
 
-     <!-- ========================================= -->
-            <!-- CONTEÚDO PRINCIPAL -->
+        <!-- ========================================= -->
+        <!-- CONTEÚDO PRINCIPAL -->
+        <!-- ========================================= -->
+
+        <section class="mt-6 flex flex-col gap-6 font-inter">
+
+            <!-- ========================================= -->
+            <!-- BANNER -->
             <!-- ========================================= -->
 
-            <section class="mt-6 flex flex-col gap-6 font-inter">
+            <section
+                class="bg-linear-to-r from-[#1F5C38] to-[#288352] rounded-3xl p-10 flex justify-between items-center h-96">
+
+                <div class="max-w-2xl">
+
+                    <span class="bg-white/20 text-white px-4 py-2 rounded-full text-sm">
+
+                        Continue evoluindo
+
+                    </span>
+
+                    <h1 class="text-5xl font-bold text-white mt-4 leading-tight">
+
+                        Bem-vindo de volta!
+
+                    </h1>
+
+                    <p class="text-green-100 text-lg mt-4 max-w-xl">
+
+                        Organize seus estudos, acompanhe seu desempenho e mantenha sua rotina sempre em dia.
+
+                    </p>
+
+                    <button
+                        class="mt-8 bg-white text-[#288352] px-7 py-4 rounded-2xl font-semibold hover:scale-105 transition">
+
+                        Continuar estudando
+
+                    </button>
+
+                </div>
+
+                <img src="{{ url_for('static', filename='img/LogoNexStudy.png') }}" class="w-56">
+
+            </section>
+
+
+
+            <!-- ========================================= -->
+            <!-- GRID PRINCIPAL -->
+            <!-- ========================================= -->
+
+            <section class="grid grid-cols-[2fr_1fr] gap-6">
 
                 <!-- ========================================= -->
-                <!-- BANNER -->
+                <!-- COLUNA ESQUERDA -->
                 <!-- ========================================= -->
 
-                <section
-                    class="bg-linear-to-r from-[#1F5C38] to-[#288352] rounded-3xl p-10 flex justify-between items-center h-96">
+                <section class="bg-white rounded-3xl shadow-sm p-7 flex flex-col h-92">
 
-                    <div class="max-w-2xl">
+                    <!-- Cabeçalho -->
 
-                        <span class="bg-white/20 text-white px-4 py-2 rounded-full text-sm">
+                    <div class="flex items-center justify-between mb-6">
 
-                            Continue evoluindo
+                        <div>
 
-                        </span>
+                            <h2 class="text-3xl font-bold text-gray-800">
 
-                        <h1 class="text-5xl font-bold text-white mt-4 leading-tight">
+                                Continue Learning
 
-                            Bem-vindo de volta!
+                            </h2>
 
-                        </h1>
+                            <p class="text-gray-500 mt-1">
 
-                        <p class="text-green-100 text-lg mt-4 max-w-xl">
+                                Continue exatamente de onde você parou.
 
-                            Organize seus estudos, acompanhe seu desempenho e mantenha sua rotina sempre em dia.
+                            </p>
 
-                        </p>
+                        </div>
 
-                        <button
-                            class="mt-8 bg-white text-[#288352] px-7 py-4 rounded-2xl font-semibold hover:scale-105 transition">
+                        <button class="text-[#288352] font-semibold hover:underline">
 
-                            Continuar estudando
+                            Ver todas
 
                         </button>
 
                     </div>
 
-                    <img src="{{ url_for('static', filename='img/LogoNexStudy.png') }}" class="w-56">
+
+
+                    <!-- Área com Scroll -->
+
+                    <div class="flex-1 overflow-y-auto pr-2 space-y-5">
+
+                        <!-- ============================== -->
+                        <!-- CARD -->
+                        <!-- ============================== -->
+
+                        <article class="rounded-3xl border border-gray-200 overflow-hidden hover:shadow-lg transition">
+
+                            <div class="bg-[#EF4444] h-3"></div>
+
+                            <div class="p-6">
+
+                                <div class="flex justify-between">
+
+                                    <div>
+
+                                        <h3 class="text-2xl font-bold">
+
+                                            Matemática
+
+                                        </h3>
+
+                                        <p class="text-gray-500 mt-1">
+
+                                            Continue no Capítulo 6
+
+                                        </p>
+
+                                    </div>
+
+                                    <span
+                                        class="bg-red-100 text-red-600 rounded-full px-4 py-2 text-sm font-semibold h-fit">
+
+                                        82%
+
+                                    </span>
+
+                                </div>
+
+                                <div class="grid grid-cols-3 gap-4 mt-8">
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+
+                                            Média
+
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+
+                                            8,7
+
+                                        </h4>
+
+                                    </div>
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+
+                                            Horas
+
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+
+                                            16h
+
+                                        </h4>
+
+                                    </div>
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+
+                                            Pomodoros
+
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+
+                                            42
+
+                                        </h4>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- CARD -->
+
+                        <article class="rounded-3xl border border-gray-200 overflow-hidden hover:shadow-lg transition">
+
+                            <div class="bg-[#F59E0B] h-3"></div>
+
+                            <div class="p-6">
+
+                                <div class="flex justify-between">
+
+                                    <div>
+
+                                        <h3 class="text-2xl font-bold">
+
+                                            História
+
+                                        </h3>
+
+                                        <p class="text-gray-500 mt-1">
+
+                                            Revolução Industrial
+
+                                        </p>
+
+                                    </div>
+
+                                    <span
+                                        class="bg-yellow-100 text-yellow-600 rounded-full px-4 py-2 text-sm font-semibold h-fit">
+
+                                        63%
+
+                                    </span>
+
+                                </div>
+
+                                <div class="grid grid-cols-3 gap-4 mt-8">
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+
+                                            Média
+
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+
+                                            7,2
+
+                                        </h4>
+
+                                    </div>
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+
+                                            Horas
+
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+
+                                            9h
+
+                                        </h4>
+
+                                    </div>
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+
+                                            Pomodoros
+
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+
+                                            18
+
+                                        </h4>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- ============================== -->
+                        <!-- CARD -->
+                        <!-- ============================== -->
+
+                        <article class="rounded-3xl border border-gray-200 overflow-hidden hover:shadow-lg transition">
+
+                            <div class="bg-[#22C55E] h-3"></div>
+
+                            <div class="p-6">
+
+                                <div class="flex justify-between">
+
+                                    <div>
+
+                                        <h3 class="text-2xl font-bold">
+
+                                            Biologia
+
+                                        </h3>
+
+                                        <p class="text-gray-500 mt-1">
+
+                                            Genética e DNA
+
+                                        </p>
+
+                                    </div>
+
+                                    <span
+                                        class="bg-green-100 text-green-600 rounded-full px-4 py-2 text-sm font-semibold h-fit">
+
+                                        91%
+
+                                    </span>
+
+                                </div>
+
+                                <div class="grid grid-cols-3 gap-4 mt-8">
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+                                            Média
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+                                            9,4
+                                        </h4>
+
+                                    </div>
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+                                            Horas
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+                                            22h
+                                        </h4>
+
+                                    </div>
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+                                            Pomodoros
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+                                            61
+                                        </h4>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- ============================== -->
+                        <!-- CARD -->
+                        <!-- ============================== -->
+
+                        <article class="rounded-3xl border border-gray-200 overflow-hidden hover:shadow-lg transition">
+
+                            <div class="bg-[#3B82F6] h-3"></div>
+
+                            <div class="p-6">
+
+                                <div class="flex justify-between">
+
+                                    <div>
+
+                                        <h3 class="text-2xl font-bold">
+
+                                            Física
+
+                                        </h3>
+
+                                        <p class="text-gray-500 mt-1">
+
+                                            Leis de Newton
+
+                                        </p>
+
+                                    </div>
+
+                                    <span
+                                        class="bg-blue-100 text-blue-600 rounded-full px-4 py-2 text-sm font-semibold h-fit">
+
+                                        74%
+
+                                    </span>
+
+                                </div>
+
+                                <div class="grid grid-cols-3 gap-4 mt-8">
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+                                            Média
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+                                            8,0
+                                        </h4>
+
+                                    </div>
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+                                            Horas
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+                                            14h
+                                        </h4>
+
+                                    </div>
+
+                                    <div>
+
+                                        <p class="text-gray-400 text-sm">
+                                            Pomodoros
+                                        </p>
+
+                                        <h4 class="text-2xl font-bold">
+                                            27
+                                        </h4>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
 
                 </section>
 
 
 
                 <!-- ========================================= -->
-                <!-- GRID PRINCIPAL -->
+                <!-- COLUNA DIREITA -->
                 <!-- ========================================= -->
 
-                <section class="grid grid-cols-[2fr_1fr] gap-6">
-
+                <aside class="flex flex-col gap-2">
                     <!-- ========================================= -->
-                    <!-- COLUNA ESQUERDA -->
+                    <!-- ESTATÍSTICAS -->
                     <!-- ========================================= -->
 
-                    <section class="bg-white rounded-3xl shadow-sm p-7 flex flex-col h-92">
+                    <section class="grid grid-cols-2 gap-2">
 
-                        <!-- Cabeçalho -->
+                        <article class="bg-white rounded-2xl p-3 shadow-sm h-24">
 
-                        <div class="flex items-center justify-between mb-6">
 
-                            <div>
 
-                                <h2 class="text-3xl font-bold text-gray-800">
+                            <p class="text-gray-500 text-sm">
+                                Horas estudadas
+                            </p>
 
-                                    Continue Learning
+                            <h2 class="text-4xl font-bold text-[#288352] mt-2">
+                                42h
+                            </h2>
 
-                                </h2>
+                        </article>
 
-                                <p class="text-gray-500 mt-1">
+                        <article class="bg-white rounded-2xl p-3 shadow-sm h-24">
 
-                                    Continue exatamente de onde você parou.
+                            <p class="text-gray-500 text-sm">
+                                Sequência
+                            </p>
 
-                                </p>
+                            <h2 class="text-4xl font-bold text-[#288352] mt-2">
+                                12🔥
+                            </h2>
 
-                            </div>
+                        </article>
 
-                            <button class="text-[#288352] font-semibold hover:underline">
+                        <article class="bg-white rounded-2xl p-3 shadow-sm h-24">
 
-                                Ver todas
+                            <p class="text-gray-500 text-sm">
+                                Disciplinas
+                            </p>
 
-                            </button>
+                            <h2 class="text-4xl font-bold text-[#288352] mt-2">
+                                8
+                            </h2>
 
-                        </div>
+                        </article>
 
+                        <article class="bg-white rounded-2xl p-3 shadow-sm h-24">
 
+                            <p class="text-gray-500 text-sm">
+                                Meta semanal
+                            </p>
 
-                        <!-- Área com Scroll -->
+                            <h2 class="text-4xl font-bold text-[#288352] mt-2">
+                                87%
+                            </h2>
 
-                        <div class="flex-1 overflow-y-auto pr-2 space-y-5">
-
-                            <!-- ============================== -->
-                            <!-- CARD -->
-                            <!-- ============================== -->
-
-                            <article
-                                class="rounded-3xl border border-gray-200 overflow-hidden hover:shadow-lg transition">
-
-                                <div class="bg-[#EF4444] h-3"></div>
-
-                                <div class="p-6">
-
-                                    <div class="flex justify-between">
-
-                                        <div>
-
-                                            <h3 class="text-2xl font-bold">
-
-                                                Matemática
-
-                                            </h3>
-
-                                            <p class="text-gray-500 mt-1">
-
-                                                Continue no Capítulo 6
-
-                                            </p>
-
-                                        </div>
-
-                                        <span
-                                            class="bg-red-100 text-red-600 rounded-full px-4 py-2 text-sm font-semibold h-fit">
-
-                                            82%
-
-                                        </span>
-
-                                    </div>
-
-                                    <div class="grid grid-cols-3 gap-4 mt-8">
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-
-                                                Média
-
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-
-                                                8,7
-
-                                            </h4>
-
-                                        </div>
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-
-                                                Horas
-
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-
-                                                16h
-
-                                            </h4>
-
-                                        </div>
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-
-                                                Pomodoros
-
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-
-                                                42
-
-                                            </h4>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </article>
-
-
-
-                            <!-- CARD -->
-
-                            <article
-                                class="rounded-3xl border border-gray-200 overflow-hidden hover:shadow-lg transition">
-
-                                <div class="bg-[#F59E0B] h-3"></div>
-
-                                <div class="p-6">
-
-                                    <div class="flex justify-between">
-
-                                        <div>
-
-                                            <h3 class="text-2xl font-bold">
-
-                                                História
-
-                                            </h3>
-
-                                            <p class="text-gray-500 mt-1">
-
-                                                Revolução Industrial
-
-                                            </p>
-
-                                        </div>
-
-                                        <span
-                                            class="bg-yellow-100 text-yellow-600 rounded-full px-4 py-2 text-sm font-semibold h-fit">
-
-                                            63%
-
-                                        </span>
-
-                                    </div>
-
-                                    <div class="grid grid-cols-3 gap-4 mt-8">
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-
-                                                Média
-
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-
-                                                7,2
-
-                                            </h4>
-
-                                        </div>
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-
-                                                Horas
-
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-
-                                                9h
-
-                                            </h4>
-
-                                        </div>
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-
-                                                Pomodoros
-
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-
-                                                18
-
-                                            </h4>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </article>
-
-                            <!-- ============================== -->
-                            <!-- CARD -->
-                            <!-- ============================== -->
-
-                            <article
-                                class="rounded-3xl border border-gray-200 overflow-hidden hover:shadow-lg transition">
-
-                                <div class="bg-[#22C55E] h-3"></div>
-
-                                <div class="p-6">
-
-                                    <div class="flex justify-between">
-
-                                        <div>
-
-                                            <h3 class="text-2xl font-bold">
-
-                                                Biologia
-
-                                            </h3>
-
-                                            <p class="text-gray-500 mt-1">
-
-                                                Genética e DNA
-
-                                            </p>
-
-                                        </div>
-
-                                        <span
-                                            class="bg-green-100 text-green-600 rounded-full px-4 py-2 text-sm font-semibold h-fit">
-
-                                            91%
-
-                                        </span>
-
-                                    </div>
-
-                                    <div class="grid grid-cols-3 gap-4 mt-8">
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-                                                Média
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-                                                9,4
-                                            </h4>
-
-                                        </div>
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-                                                Horas
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-                                                22h
-                                            </h4>
-
-                                        </div>
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-                                                Pomodoros
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-                                                61
-                                            </h4>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </article>
-
-
-
-                            <!-- ============================== -->
-                            <!-- CARD -->
-                            <!-- ============================== -->
-
-                            <article
-                                class="rounded-3xl border border-gray-200 overflow-hidden hover:shadow-lg transition">
-
-                                <div class="bg-[#3B82F6] h-3"></div>
-
-                                <div class="p-6">
-
-                                    <div class="flex justify-between">
-
-                                        <div>
-
-                                            <h3 class="text-2xl font-bold">
-
-                                                Física
-
-                                            </h3>
-
-                                            <p class="text-gray-500 mt-1">
-
-                                                Leis de Newton
-
-                                            </p>
-
-                                        </div>
-
-                                        <span
-                                            class="bg-blue-100 text-blue-600 rounded-full px-4 py-2 text-sm font-semibold h-fit">
-
-                                            74%
-
-                                        </span>
-
-                                    </div>
-
-                                    <div class="grid grid-cols-3 gap-4 mt-8">
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-                                                Média
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-                                                8,0
-                                            </h4>
-
-                                        </div>
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-                                                Horas
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-                                                14h
-                                            </h4>
-
-                                        </div>
-
-                                        <div>
-
-                                            <p class="text-gray-400 text-sm">
-                                                Pomodoros
-                                            </p>
-
-                                            <h4 class="text-2xl font-bold">
-                                                27
-                                            </h4>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </article>
-
-                        </div>
+                        </article>
 
                     </section>
 
 
 
                     <!-- ========================================= -->
-                    <!-- COLUNA DIREITA -->
+                    <!-- DATA -->
                     <!-- ========================================= -->
 
-                    <aside class="flex flex-col gap-2">
-                        <!-- ========================================= -->
-                        <!-- ESTATÍSTICAS -->
-                        <!-- ========================================= -->
+                    <section class="bg-white rounded-3xl p-2 shadow-sm text-center h-40">
 
-                        <section class="grid grid-cols-2 gap-2">
+                        <p class="uppercase tracking-widest text-gray-400 text-sm">
 
-                            <article class="bg-white rounded-2xl p-3 shadow-sm h-24">
+                            Segunda-feira
 
-                             
+                        </p>
 
-                                <p class="text-gray-500 text-sm">
-                                    Horas estudadas
-                                </p>
+                        <h2 class="text-6xl font-bold text-[#288352] mt-3">
 
-                                <h2 class="text-4xl font-bold text-[#288352] mt-2">
-                                    42h
-                                </h2>
+                            25
 
-                            </article>
+                        </h2>
 
-                            <article class="bg-white rounded-2xl p-3 shadow-sm h-24">
+                        <p class="text-2xl font-semibold text-gray-700 mt-2">
 
-                                <p class="text-gray-500 text-sm">
-                                    Sequência
-                                </p>
+                            Julho
 
-                                <h2 class="text-4xl font-bold text-[#288352] mt-2">
-                                    12🔥
-                                </h2>
+                        </p>
 
-                            </article>
+                    </section>
 
-                            <article class="bg-white rounded-2xl p-3 shadow-sm h-24">
-
-                                <p class="text-gray-500 text-sm">
-                                    Disciplinas
-                                </p>
-
-                                <h2 class="text-4xl font-bold text-[#288352] mt-2">
-                                    8
-                                </h2>
-
-                            </article>
-
-                            <article class="bg-white rounded-2xl p-3 shadow-sm h-24">
-
-                                <p class="text-gray-500 text-sm">
-                                    Meta semanal
-                                </p>
-
-                                <h2 class="text-4xl font-bold text-[#288352] mt-2">
-                                    87%
-                                </h2>
-
-                            </article>
-
-                        </section>
-
-
-
-                        <!-- ========================================= -->
-                        <!-- DATA -->
-                        <!-- ========================================= -->
-
-                        <section class="bg-white rounded-3xl p-2 shadow-sm text-center h-40">
-
-                            <p class="uppercase tracking-widest text-gray-400 text-sm">
-
-                                Segunda-feira
-
-                            </p>
-
-                            <h2 class="text-6xl font-bold text-[#288352] mt-3">
-
-                                25
-
-                            </h2>
-
-                            <p class="text-2xl font-semibold text-gray-700 mt-2">
-
-                                Julho
-
-                            </p>
-
-                        </section>
-
-                    </aside>
-
-                </section>
+                </aside>
 
             </section>
-    
+
+        </section>
+
 
     </main>
+
 </html>

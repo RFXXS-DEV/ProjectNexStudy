@@ -1,23 +1,444 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Slabo+27px&display=swap" rel="stylesheet">
-    
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Slabo+27px&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
     <title>Configurações</title>
 </head>
-<body class="min-h-screen bg-linear-to-br from-[#d1fad8] to-[#bbf7d0] font-sans text-gray-800 selection:bg-green-300">
 
-    <main class="flex h-screen overflow-hidden">
+<body class="h-screen overflow-hidden bg-linear-to-br from-[#d1fad8] to-[#bbf7d0] font-sans text-gray-800">
+
+    <main class="flex h-screen">
 
         {% include "components/sidebar.html" %}
 
+        <!-- ========================================= -->
+        <!-- CONTEÚDO -->
+        <!-- ========================================= -->
+
+        <section class="flex-1 p-5 flex gap-5 h-full overflow-hidden">
+
+            <!-- Painel Principal -->
+
+            <section
+                class="flex-1 bg-[#edf9f0] rounded-3xl shadow-sm border border-green-200 flex flex-col overflow-hidden mb-10">
+
+                <!-- Cabeçalho -->
+
+                <header class="px-8 py-8 border-b border-green-200">
+
+                    <h1 class="text-4xl font-bold text-[#23663f]">
+                        Configurações
+                    </h1>
+
+                    <p class="text-gray-500 mt-2">
+                        Personalize sua experiência no NexStudy.
+                    </p>
+
+                </header>
+
+                <!-- ===================================== -->
+                <!-- ÁREA QUE ROLA -->
+                <!-- ===================================== -->
+
+                <div class="flex-1 overflow-y-auto p-8">
+
+                    <div class="grid grid-cols-2 gap-8">
+
+                        <!-- ================================= -->
+                        <!-- APARÊNCIA -->
+                        <!-- ================================= -->
+
+                        <section class="bg-white rounded-3xl shadow-sm border border-green-100 p-8">
+
+                            <div class="flex items-center gap-4 mb-8">
+
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
+                                    🎨
+                                </div>
+
+                                <div>
+
+                                    <h2 class="text-2xl font-bold text-[#23663f]">
+                                        Aparência
+                                    </h2>
+
+                                    <p class="text-gray-500">
+                                        Escolha o tema do sistema.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="space-y-5">
+
+                                <label
+                                    class="flex justify-between items-center rounded-2xl border border-green-200 bg-green-50 p-5 cursor-pointer hover:bg-green-100 transition">
+
+                                    <div>
+
+                                        <p class="font-semibold">
+                                            ☀ Tema Claro
+                                        </p>
+
+                                        <p class="text-sm text-gray-500">
+                                            Melhor para ambientes claros.
+                                        </p>
+
+                                    </div>
+
+                                    <input type="radio" checked name="tema" class="accent-[#288352]">
+
+                                </label>
+
+                                <label
+                                    class="flex justify-between items-center rounded-2xl border border-green-200 bg-green-50 p-5 cursor-pointer hover:bg-green-100 transition">
+
+                                    <div>
+
+                                        <p class="font-semibold">
+                                            🌙 Tema Escuro
+                                        </p>
+
+                                        <p class="text-sm text-gray-500">
+                                            Ideal para estudar à noite.
+                                        </p>
+
+                                    </div>
+
+                                    <input type="radio" name="tema" class="accent-[#288352]">
+
+                                </label>
+
+                            </div>
+
+                        </section>
+
+                        <!-- ================================= -->
+                        <!-- CONTA -->
+                        <!-- ================================= -->
+
+                        <section class="bg-white rounded-3xl shadow-sm border border-green-100 p-8">
+
+                            <div class="flex items-center gap-4 mb-8">
+
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
+
+                                    👤
+
+                                </div>
+
+                                <div>
+
+                                    <h2 class="text-2xl font-bold text-[#23663f]">
+                                        Conta
+                                    </h2>
+
+                                    <p class="text-gray-500">
+                                        Dados da conta.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="space-y-5">
+
+                                <div>
+
+                                    <label>Nome</label>
+
+                                    <input
+                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 bg-[#f8fffa] px-5">
+
+                                </div>
+
+                                <div>
+
+                                    <label>Email</label>
+
+                                    <input
+                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 bg-[#f8fffa] px-5">
+
+                                </div>
+
+                                <div>
+
+                                    <label>Senha</label>
+
+                                    <input type="password"
+                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 bg-[#f8fffa] px-5">
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                        <!-- ================================= -->
+                        <!-- ESTUDOS -->
+                        <!-- ================================= -->
+
+                        <section class="bg-white rounded-3xl shadow-sm border border-green-100 p-8">
+
+                            <h2 class="text-2xl font-bold text-[#23663f] mb-8">
+
+                                📚 Estudos
+
+                            </h2>
+
+                            <div class="space-y-5">
+
+                                <div>
+
+                                    <label>Meta diária</label>
+
+                                    <input class="mt-2 h-14 w-full rounded-2xl border border-green-200 px-5">
+
+                                </div>
+
+                                <div>
+
+                                    <label>Meta semanal</label>
+
+                                    <input class="mt-2 h-14 w-full rounded-2xl border border-green-200 px-5">
+
+                                </div>
+
+                                <div>
+
+                                    <label>Pomodoros</label>
+
+                                    <input class="mt-2 h-14 w-full rounded-2xl border border-green-200 px-5">
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                        <!-- ================================= -->
+                        <!-- SISTEMA ESCOLAR -->
+                        <!-- ================================= -->
+
+                        <section class="bg-white rounded-3xl shadow-sm border border-green-100 p-8">
+
+                            <div class="flex items-center gap-4 mb-8">
+
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
+
+                                    🎓
+
+                                </div>
+
+                                <div>
+
+                                    <h2 class="text-2xl font-bold text-[#23663f]">
+                                        Sistema Escolar
+                                    </h2>
+
+                                    <p class="text-gray-500">
+                                        Configure a forma de avaliação.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="space-y-4">
+
+                                <!-- Bimestral -->
+
+                                <label
+                                    class="flex justify-between items-center rounded-2xl border border-green-200 bg-[#f8fffa] p-5 cursor-pointer hover:bg-green-50 transition">
+
+                                    <div>
+
+                                        <p class="font-semibold">
+                                            Bimestral
+                                        </p>
+
+                                        <p class="text-sm text-gray-500">
+                                            A escola utiliza 4 períodos.
+                                        </p>
+
+                                    </div>
+
+                                    <input type="radio" name="sistema" class="accent-[#288352]">
+
+                                </label>
+
+
+                                <!-- Trimestral -->
+
+                                <label
+                                    class="flex justify-between items-center rounded-2xl border border-green-200 bg-[#f8fffa] p-5 cursor-pointer hover:bg-green-50 transition">
+
+                                    <div>
+
+                                        <p class="font-semibold">
+                                            Trimestral
+                                        </p>
+
+                                        <p class="text-sm text-gray-500">
+                                            A escola utiliza 3 períodos.
+                                        </p>
+
+                                    </div>
+
+                                    <input type="radio" checked name="sistema" class="accent-[#288352]">
+
+                                </label>
+
+
+                                <!-- Semestral -->
+
+                                <label
+                                    class="flex justify-between items-center rounded-2xl border border-green-200 bg-[#f8fffa] p-5 cursor-pointer hover:bg-green-50 transition">
+
+                                    <div>
+
+                                        <p class="font-semibold">
+                                            Semestral
+                                        </p>
+
+                                        <p class="text-sm text-gray-500">
+                                            A escola utiliza 2 períodos.
+                                        </p>
+
+                                    </div>
+
+                                    <input type="radio" name="sistema" class="accent-[#288352]">
+
+                                </label>
+
+
+                                <!-- Média -->
+
+                                <div class="pt-3">
+
+                                    <label class="font-medium text-gray-700">
+
+                                        Média para aprovação
+
+                                    </label>
+
+                                    <input type="number" value="7" min="0" max="10" step="0.1"
+                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 bg-[#f8fffa] px-5 outline-none focus:ring-2 focus:ring-green-300">
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                    <!-- ================================= -->
+                    <!-- SOBRE O NEXSTUDY -->
+                    <!-- ================================= -->
+
+                    <section class="mt-8 bg-white rounded-3xl shadow-sm border border-green-100 p-8">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <div class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
+
+                                💚
+
+                            </div>
+
+                            <div>
+
+                                <h2 class="text-2xl font-bold text-[#23663f]">
+
+                                    Sobre o NexStudy
+
+                                </h2>
+
+                                <p class="text-gray-500">
+
+                                    Informações sobre o sistema.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="space-y-4 text-gray-600 leading-7">
+
+                            <p>
+
+                                <strong class="text-[#23663f]">
+
+                                    Versão:
+
+                                </strong>
+
+                                1.0
+
+                            </p>
+
+                            <p>
+
+                                O NexStudy foi desenvolvido para ajudar estudantes
+                                a organizarem suas matérias, acompanharem suas metas
+                                e melhorarem sua rotina de estudos.
+
+                            </p>
+
+                            <p>
+
+                                Desenvolvido utilizando HTML, Tailwind CSS,
+                                JavaScript, Python e Flask.
+
+                            </p>
+
+                        </div>
+
+                    </section>
+
+                    <!-- Espaço no fim para o conteúdo não ficar escondido -->
+
+                    <div class="h-4"></div>
+
+                </div>
+
+                <!-- ===================================== -->
+                <!-- BOTÃO FIXO -->
+                <!-- ===================================== -->
+
+                <footer class="shrink-0 border-t border-green-200 bg-[#edf9f0] p-6">
+
+                    <button type="button"
+                        class="w-full h-14 rounded-2xl bg-[#288352] text-white font-semibold text-lg shadow-sm transition hover:bg-[#216840] hover:shadow-md">
+
+                        Salvar alterações
+
+                    </button>
+
+                </footer>
+
+            </section>
+
+        </section>
+
     </main>
-    
+
 </body>
+
 </html>
