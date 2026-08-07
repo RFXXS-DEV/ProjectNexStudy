@@ -15,11 +15,14 @@
     <title>Configurações</title>
 </head>
 
-<body class="h-screen overflow-hidden bg-linear-to-br from-[#d1fad8] to-[#bbf7d0] font-sans text-gray-800">
+<body class="h-screen overflow-hidden bg-linear-to-br from-[#d1fad8] to-[#bbf7d0] font-sans text-gray-800 transition-colors duration-300 dark:from-[#080809] dark:to-[#111214] dark:text-[#f2f3f5]">
 
     <main class="flex h-screen">
 
         {% include "components/sidebar.html" %}
+
+        <section class="min-w-0 flex-1 overflow-y-auto p-4 text-slate-800 dark:text-[#f2f3f5]">
+            {% include "components/topbar.html" %}
 
         <!-- ========================================= -->
         <!-- CONTEÚDO -->
@@ -30,17 +33,17 @@
             <!-- Painel Principal -->
 
             <section
-                class="flex-1 bg-[#edf9f0] rounded-3xl shadow-sm border border-green-200 flex flex-col overflow-hidden mb-10">
+                class="flex-1 bg-[#edf9f0] dark:bg-[#0d0d0f] rounded-3xl shadow-sm border border-green-200 dark:border-[#242529] flex flex-col overflow-hidden mb-10">
 
                 <!-- Cabeçalho -->
 
-                <header class="px-8 py-8 border-b border-green-200">
+                <header class="px-8 py-8 border-b border-green-200 dark:border-[#242529]">
 
-                    <h1 class="text-4xl font-bold text-[#23663f]">
+                    <h1 class="text-4xl font-bold text-[#23663f] dark:text-emerald-300">
                         Configurações
                     </h1>
 
-                    <p class="text-gray-500 mt-2">
+                    <p class="text-gray-500 dark:text-[#b5bac1] mt-2">
                         Personalize sua experiência no NexStudy.
                     </p>
 
@@ -58,22 +61,22 @@
                         <!-- APARÊNCIA -->
                         <!-- ================================= -->
 
-                        <section class="bg-white rounded-3xl shadow-sm border border-green-100 p-8">
+                        <section class="bg-white dark:bg-[#111214] rounded-3xl shadow-sm border border-green-100 dark:border-[#242529] p-8">
 
                             <div class="flex items-center gap-4 mb-8">
 
                                 <div
-                                    class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
+                                    class="w-14 h-14 rounded-2xl bg-green-100 dark:bg-[#263c32] flex items-center justify-center text-3xl">
                                     🎨
                                 </div>
 
                                 <div>
 
-                                    <h2 class="text-2xl font-bold text-[#23663f]">
+                                    <h2 class="text-2xl font-bold text-[#23663f] dark:text-emerald-300">
                                         Aparência
                                     </h2>
 
-                                    <p class="text-gray-500">
+                                    <p class="text-gray-500 dark:text-[#b5bac1]">
                                         Escolha o tema do sistema.
                                     </p>
 
@@ -84,7 +87,7 @@
                             <div class="space-y-5">
 
                                 <label
-                                    class="flex justify-between items-center rounded-2xl border border-green-200 bg-green-50 p-5 cursor-pointer hover:bg-green-100 transition">
+                                    class="flex justify-between items-center rounded-2xl border border-green-200 dark:border-[#242529] bg-green-50 dark:bg-[#0d0d0f] p-5 cursor-pointer hover:bg-green-100 transition">
 
                                     <div>
 
@@ -92,18 +95,18 @@
                                             ☀ Tema Claro
                                         </p>
 
-                                        <p class="text-sm text-gray-500">
+                                        <p class="text-sm text-gray-500 dark:text-[#b5bac1]">
                                             Melhor para ambientes claros.
                                         </p>
 
                                     </div>
 
-                                    <input type="radio" checked name="tema" class="accent-[#288352]">
+                                    <input type="radio" checked name="tema" class="accent-[#288352] dark:bg-[#111214] dark:text-[#f2f3f5] dark:border-[#242529]">
 
                                 </label>
 
                                 <label
-                                    class="flex justify-between items-center rounded-2xl border border-green-200 bg-green-50 p-5 cursor-pointer hover:bg-green-100 transition">
+                                    class="flex justify-between items-center rounded-2xl border border-green-200 dark:border-[#242529] bg-green-50 dark:bg-[#0d0d0f] p-5 cursor-pointer hover:bg-green-100 transition">
 
                                     <div>
 
@@ -111,13 +114,13 @@
                                             🌙 Tema Escuro
                                         </p>
 
-                                        <p class="text-sm text-gray-500">
+                                        <p class="text-sm text-gray-500 dark:text-[#b5bac1]">
                                             Ideal para estudar à noite.
                                         </p>
 
                                     </div>
 
-                                    <input type="radio" name="tema" class="accent-[#288352]">
+                                    <input type="radio" name="tema" class="accent-[#288352] dark:bg-[#111214] dark:text-[#f2f3f5] dark:border-[#242529]">
 
                                 </label>
 
@@ -129,12 +132,12 @@
                         <!-- CONTA -->
                         <!-- ================================= -->
 
-                        <section class="bg-white rounded-3xl shadow-sm border border-green-100 p-8">
+                        <section class="bg-white dark:bg-[#111214] rounded-3xl shadow-sm border border-green-100 dark:border-[#242529] p-8">
 
                             <div class="flex items-center gap-4 mb-8">
 
                                 <div
-                                    class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
+                                    class="w-14 h-14 rounded-2xl bg-green-100 dark:bg-[#263c32] flex items-center justify-center text-3xl">
 
                                     👤
 
@@ -142,11 +145,11 @@
 
                                 <div>
 
-                                    <h2 class="text-2xl font-bold text-[#23663f]">
+                                    <h2 class="text-2xl font-bold text-[#23663f] dark:text-emerald-300">
                                         Conta
                                     </h2>
 
-                                    <p class="text-gray-500">
+                                    <p class="text-gray-500 dark:text-[#b5bac1]">
                                         Dados da conta.
                                     </p>
 
@@ -161,7 +164,7 @@
                                     <label>Nome</label>
 
                                     <input
-                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 bg-[#f8fffa] px-5">
+                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 dark:border-[#242529] bg-[#f8fffa] dark:bg-[#111214] px-5 dark:text-[#f2f3f5]">
 
                                 </div>
 
@@ -170,7 +173,7 @@
                                     <label>Email</label>
 
                                     <input
-                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 bg-[#f8fffa] px-5">
+                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 dark:border-[#242529] bg-[#f8fffa] dark:bg-[#111214] px-5 dark:text-[#f2f3f5]">
 
                                 </div>
 
@@ -179,7 +182,7 @@
                                     <label>Senha</label>
 
                                     <input type="password"
-                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 bg-[#f8fffa] px-5">
+                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 dark:border-[#242529] bg-[#f8fffa] dark:bg-[#111214] px-5 dark:text-[#f2f3f5]">
 
                                 </div>
 
@@ -191,9 +194,9 @@
                         <!-- ESTUDOS -->
                         <!-- ================================= -->
 
-                        <section class="bg-white rounded-3xl shadow-sm border border-green-100 p-8">
+                        <section class="bg-white dark:bg-[#111214] rounded-3xl shadow-sm border border-green-100 dark:border-[#242529] p-8">
 
-                            <h2 class="text-2xl font-bold text-[#23663f] mb-8">
+                            <h2 class="text-2xl font-bold text-[#23663f] dark:text-emerald-300 mb-8">
 
                                 📚 Estudos
 
@@ -205,7 +208,7 @@
 
                                     <label>Meta diária</label>
 
-                                    <input class="mt-2 h-14 w-full rounded-2xl border border-green-200 px-5">
+                                    <input class="mt-2 h-14 w-full rounded-2xl border border-green-200 dark:border-[#242529] px-5 dark:bg-[#111214] dark:text-[#f2f3f5]">
 
                                 </div>
 
@@ -213,7 +216,7 @@
 
                                     <label>Meta semanal</label>
 
-                                    <input class="mt-2 h-14 w-full rounded-2xl border border-green-200 px-5">
+                                    <input class="mt-2 h-14 w-full rounded-2xl border border-green-200 dark:border-[#242529] px-5 dark:bg-[#111214] dark:text-[#f2f3f5]">
 
                                 </div>
 
@@ -221,7 +224,7 @@
 
                                     <label>Pomodoros</label>
 
-                                    <input class="mt-2 h-14 w-full rounded-2xl border border-green-200 px-5">
+                                    <input class="mt-2 h-14 w-full rounded-2xl border border-green-200 dark:border-[#242529] px-5 dark:bg-[#111214] dark:text-[#f2f3f5]">
 
                                 </div>
 
@@ -233,12 +236,12 @@
                         <!-- SISTEMA ESCOLAR -->
                         <!-- ================================= -->
 
-                        <section class="bg-white rounded-3xl shadow-sm border border-green-100 p-8">
+                        <section class="bg-white dark:bg-[#111214] rounded-3xl shadow-sm border border-green-100 dark:border-[#242529] p-8">
 
                             <div class="flex items-center gap-4 mb-8">
 
                                 <div
-                                    class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
+                                    class="w-14 h-14 rounded-2xl bg-green-100 dark:bg-[#263c32] flex items-center justify-center text-3xl">
 
                                     🎓
 
@@ -246,11 +249,11 @@
 
                                 <div>
 
-                                    <h2 class="text-2xl font-bold text-[#23663f]">
+                                    <h2 class="text-2xl font-bold text-[#23663f] dark:text-emerald-300">
                                         Sistema Escolar
                                     </h2>
 
-                                    <p class="text-gray-500">
+                                    <p class="text-gray-500 dark:text-[#b5bac1]">
                                         Configure a forma de avaliação.
                                     </p>
 
@@ -263,7 +266,7 @@
                                 <!-- Bimestral -->
 
                                 <label
-                                    class="flex justify-between items-center rounded-2xl border border-green-200 bg-[#f8fffa] p-5 cursor-pointer hover:bg-green-50 transition">
+                                    class="flex justify-between items-center rounded-2xl border border-green-200 dark:border-[#242529] bg-[#f8fffa] dark:bg-[#111214] p-5 cursor-pointer hover:bg-green-50 transition">
 
                                     <div>
 
@@ -271,13 +274,13 @@
                                             Bimestral
                                         </p>
 
-                                        <p class="text-sm text-gray-500">
+                                        <p class="text-sm text-gray-500 dark:text-[#b5bac1]">
                                             A escola utiliza 4 períodos.
                                         </p>
 
                                     </div>
 
-                                    <input type="radio" name="sistema" class="accent-[#288352]">
+                                    <input type="radio" name="sistema" class="accent-[#288352] dark:bg-[#111214] dark:text-[#f2f3f5] dark:border-[#242529]">
 
                                 </label>
 
@@ -285,7 +288,7 @@
                                 <!-- Trimestral -->
 
                                 <label
-                                    class="flex justify-between items-center rounded-2xl border border-green-200 bg-[#f8fffa] p-5 cursor-pointer hover:bg-green-50 transition">
+                                    class="flex justify-between items-center rounded-2xl border border-green-200 dark:border-[#242529] bg-[#f8fffa] dark:bg-[#111214] p-5 cursor-pointer hover:bg-green-50 transition">
 
                                     <div>
 
@@ -293,13 +296,13 @@
                                             Trimestral
                                         </p>
 
-                                        <p class="text-sm text-gray-500">
+                                        <p class="text-sm text-gray-500 dark:text-[#b5bac1]">
                                             A escola utiliza 3 períodos.
                                         </p>
 
                                     </div>
 
-                                    <input type="radio" checked name="sistema" class="accent-[#288352]">
+                                    <input type="radio" checked name="sistema" class="accent-[#288352] dark:bg-[#111214] dark:text-[#f2f3f5] dark:border-[#242529]">
 
                                 </label>
 
@@ -307,7 +310,7 @@
                                 <!-- Semestral -->
 
                                 <label
-                                    class="flex justify-between items-center rounded-2xl border border-green-200 bg-[#f8fffa] p-5 cursor-pointer hover:bg-green-50 transition">
+                                    class="flex justify-between items-center rounded-2xl border border-green-200 dark:border-[#242529] bg-[#f8fffa] dark:bg-[#111214] p-5 cursor-pointer hover:bg-green-50 transition">
 
                                     <div>
 
@@ -315,13 +318,13 @@
                                             Semestral
                                         </p>
 
-                                        <p class="text-sm text-gray-500">
+                                        <p class="text-sm text-gray-500 dark:text-[#b5bac1]">
                                             A escola utiliza 2 períodos.
                                         </p>
 
                                     </div>
 
-                                    <input type="radio" name="sistema" class="accent-[#288352]">
+                                    <input type="radio" name="sistema" class="accent-[#288352] dark:bg-[#111214] dark:text-[#f2f3f5] dark:border-[#242529]">
 
                                 </label>
 
@@ -330,14 +333,14 @@
 
                                 <div class="pt-3">
 
-                                    <label class="font-medium text-gray-700">
+                                    <label class="font-medium text-gray-700 dark:text-[#dbdee1]">
 
                                         Média para aprovação
 
                                     </label>
 
                                     <input type="number" value="7" min="0" max="10" step="0.1"
-                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 bg-[#f8fffa] px-5 outline-none focus:ring-2 focus:ring-green-300">
+                                        class="mt-2 h-14 w-full rounded-2xl border border-green-200 dark:border-[#242529] bg-[#f8fffa] dark:bg-[#111214] px-5 outline-none focus:ring-2 focus:ring-green-300 dark:text-[#f2f3f5]">
 
                                 </div>
 
@@ -351,11 +354,11 @@
                     <!-- SOBRE O NEXSTUDY -->
                     <!-- ================================= -->
 
-                    <section class="mt-8 bg-white rounded-3xl shadow-sm border border-green-100 p-8">
+                    <section class="mt-8 bg-white dark:bg-[#111214] rounded-3xl shadow-sm border border-green-100 dark:border-[#242529] p-8">
 
                         <div class="flex items-center gap-4 mb-6">
 
-                            <div class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
+                            <div class="w-14 h-14 rounded-2xl bg-green-100 dark:bg-[#263c32] flex items-center justify-center text-3xl">
 
                                 💚
 
@@ -363,13 +366,13 @@
 
                             <div>
 
-                                <h2 class="text-2xl font-bold text-[#23663f]">
+                                <h2 class="text-2xl font-bold text-[#23663f] dark:text-emerald-300">
 
                                     Sobre o NexStudy
 
                                 </h2>
 
-                                <p class="text-gray-500">
+                                <p class="text-gray-500 dark:text-[#b5bac1]">
 
                                     Informações sobre o sistema.
 
@@ -379,11 +382,11 @@
 
                         </div>
 
-                        <div class="space-y-4 text-gray-600 leading-7">
+                        <div class="space-y-4 text-gray-600 dark:text-[#b5bac1] leading-7">
 
                             <p>
 
-                                <strong class="text-[#23663f]">
+                                <strong class="text-[#23663f] dark:text-emerald-300">
 
                                     Versão:
 
@@ -422,7 +425,7 @@
                 <!-- BOTÃO FIXO -->
                 <!-- ===================================== -->
 
-                <footer class="shrink-0 border-t border-green-200 bg-[#edf9f0] p-6">
+                <footer class="shrink-0 border-t border-green-200 dark:border-[#242529] bg-[#edf9f0] dark:bg-[#0d0d0f] p-6">
 
                     <button type="button"
                         class="w-full h-14 rounded-2xl bg-[#288352] text-white font-semibold text-lg shadow-sm transition hover:bg-[#216840] hover:shadow-md">
@@ -436,7 +439,7 @@
             </section>
 
         </section>
-
+        </section>
     </main>
 
 </body>

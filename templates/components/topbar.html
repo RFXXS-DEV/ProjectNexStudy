@@ -1,0 +1,33 @@
+<header class="flex items-center justify-between gap-6 border-b border-transparent pb-4 dark:border-[#202225]">
+    <div class="flex h-12 w-full max-w-xl items-center gap-3 rounded-xl bg-white px-4 font-inter shadow-sm transition focus-within:ring-2 focus-within:ring-[#5865f2] dark:border dark:border-[#202225] dark:bg-[#111214] dark:shadow-none">
+        <img src="{{ url_for('static', filename='icons/IconeSearch(Light).png') }}" alt="" class="h-5 w-5 dark:hidden">
+        <img src="{{ url_for('static', filename='icons/IconeSearch(Dark).png') }}" alt="" class="hidden h-5 w-5 dark:block">
+        <label for="pesquisa-global" class="sr-only">Pesquisar matérias</label>
+        <input id="pesquisa-global" type="search" name="q" placeholder="Pesquise matérias"
+            class="w-full bg-transparent text-base text-slate-800 outline-none placeholder:text-gray-400 dark:text-[#f2f3f5] dark:placeholder:text-[#6d6f78]">
+    </div>
+
+    <div class="flex items-center gap-2">
+        <button id="botao-tema" type="button" aria-label="Ativar modo escuro" aria-pressed="false"
+            class="flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-white shadow-sm transition hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5865f2] dark:border dark:border-[#202225] dark:bg-[#111214] dark:shadow-none dark:hover:bg-[#1a1a1d]">
+            <img id="icone-tema" src="{{ url_for('static', filename='icons/IconeDarkMode(Light).png') }}"
+                data-dark-mode="{{ url_for('static', filename='icons/IconeDarkMode(Light).png') }}"
+                data-light-mode="{{ url_for('static', filename='icons/IconeLightMode(Dark).png') }}" alt=""
+                class="h-5 w-5">
+        </button>
+
+        <button type="button" aria-label="Abrir notificações"
+            class="flex h-11 w-11 items-center justify-center rounded-xl bg-white shadow-sm transition hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-[#5865f2] dark:border dark:border-[#202225] dark:bg-[#111214] dark:shadow-none dark:hover:bg-[#1a1a1d]">
+            <img src="{{ url_for('static', filename='icons/IconeNotification(Light).png') }}" alt="" class="h-5 w-5 dark:hidden">
+            <img src="{{ url_for('static', filename='icons/IconeNotification(Dark).png') }}" alt="" class="hidden h-5 w-5 dark:block">
+        </button>
+
+        <button type="button" aria-label="Abrir perfil"
+            class="flex h-11 w-11 items-center justify-center rounded-xl bg-white shadow-sm transition hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-[#5865f2] dark:border dark:border-[#202225] dark:bg-[#111214] dark:shadow-none dark:hover:bg-[#1a1a1d]">
+            <img src="{{ url_for('static', filename='icons/IconePerson(Light).png') }}" alt="" class="h-5 w-5 dark:hidden">
+            <img src="{{ url_for('static', filename='icons/IconePerson(Dark).png') }}" alt="" class="hidden h-5 w-5 dark:block">
+        </button>
+    </div>
+</header>
+
+<script src="{{ url_for('static', filename='js/darkMode.js') }}" defer></script>

@@ -1,0 +1,94 @@
+<!-- ========================================= -->
+<!-- SIDEBAR -->
+<!-- ========================================= -->
+
+<aside class="m-4 flex h-[calc(100vh-2rem)] w-64 shrink-0 flex-col justify-between rounded-2xl bg-[#288352] p-4 shadow-sm transition-colors duration-300 dark:border dark:border-[#202225] dark:bg-[#0d0d0f] dark:shadow-2xl">
+
+    <!-- Logo -->
+    <div>
+
+        <div class="flex items-center gap-3 mb-12">
+
+            <img src="{{ url_for('static', filename='img/LogoNexStudy.png') }}" alt="Logo" class="w-8 h-8">
+
+            <h1 class="font-mono text-lg text-white dark:text-[#f2f3f5]">
+                NexStudy
+            </h1>
+
+        </div>
+
+
+        <!-- Menu -->
+
+        <nav class="space-y-2">
+
+            <a href="{{ url_for('dashboard') }}"
+                class="flex items-center gap-3 rounded-lg px-3 py-2.5 font-inter text-white transition hover:bg-[#429957] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white dark:text-[#b5bac1] dark:hover:bg-[#1a1a1d] dark:hover:text-[#f2f3f5]">
+
+                <img src="{{ url_for('static', filename='icons/IconeDashboard(Dark).png') }}" alt="Dashboard"
+                    class="w-5 h-5">
+
+                Dashboard
+
+            </a>
+
+            <a href="{{ url_for('disciplinas') }}"
+                class="flex items-center gap-3 rounded-lg px-3 py-2.5 font-inter text-white transition hover:bg-[#429957] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white dark:text-[#b5bac1] dark:hover:bg-[#1a1a1d] dark:hover:text-[#f2f3f5]">
+
+                <img src="{{ url_for('static', filename='icons/IconeDisciplinas(Dark).png') }}" alt="Disciplinas"
+                    class="w-5 h-5">
+
+                Minhas Disciplinas
+
+            </a>
+
+            <a href="{{ url_for('relogio') }}"
+                class="flex items-center gap-3 rounded-lg px-3 py-2.5 font-inter text-white transition hover:bg-[#429957] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white dark:text-[#b5bac1] dark:hover:bg-[#1a1a1d] dark:hover:text-[#f2f3f5]">
+
+                <img src="{{ url_for('static', filename='icons/IconeTimer(Dark).png') }}" alt="Relógio" class="w-5 h-5">
+
+                Relógio
+
+            </a>
+
+        </nav>
+
+    </div>
+
+
+
+    <!-- Rodapé -->
+
+    <nav class="space-y-2">
+
+        <a href="{{ url_for('configuracoes') }}"
+            class="flex items-center gap-3 rounded-lg px-3 py-2.5 font-inter text-white transition hover:bg-[#429957] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white dark:text-[#b5bac1] dark:hover:bg-[#1a1a1d] dark:hover:text-[#f2f3f5]">
+
+            <img src="{{ url_for('static', filename='icons/IconeSettings(Dark).png') }}" alt="Configurações"
+                class="w-5 h-5">
+
+            Configurações
+
+        </a>
+
+        <a href="{{ url_for('ajuda') }}"
+            class="flex items-center gap-3 rounded-lg px-3 py-2.5 font-inter text-white transition hover:bg-[#429957] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white dark:text-[#b5bac1] dark:hover:bg-[#1a1a1d] dark:hover:text-[#f2f3f5]">
+
+            <img src="{{ url_for('static', filename='icons/IconeHelp(Dark).png') }}" alt="Ajuda" class="w-5 h-5">
+
+            Centro de Ajuda
+
+        </a>
+
+        <a href="{{ url_for('login') }}"
+            class="flex items-center gap-3 rounded-lg px-3 py-2.5 font-inter text-white transition hover:bg-[#429957] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white dark:text-[#b5bac1] dark:hover:bg-[#1a1a1d] dark:hover:text-[#f2f3f5]">
+
+            <img src="{{ url_for('static', filename='icons/IconeLogout(Dark).png') }}" alt="Sair" class="w-5 h-5">
+
+            Sair
+
+        </a>
+
+    </nav>
+
+</aside>

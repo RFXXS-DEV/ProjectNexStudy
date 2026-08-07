@@ -18,7 +18,7 @@
 
 <body>
 
-    <body class="min-h-screen">
+    <body class="transition-colors duration-300 min-h-screen dark:bg-[#080809] dark:text-[#f2f3f5]">
 
         <!-- Página inteira -->
         <main class="flex min-h-screen">
@@ -36,7 +36,7 @@
             <!-- ========================================= -->
             <!-- LADO DIREITO -->
             <!-- ========================================= -->
-            <section class="w-1/2 h-screen flex items-center justify-center bg-green-200">
+            <section class="w-1/2 h-screen flex items-center justify-center bg-green-200 dark:bg-[#080809]">
 
                 <!-- Container principal -->
                 <div class="w-full max-w-md px-0 flex flex-col items-center">
@@ -62,7 +62,7 @@
                                 class="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6">
 
                             <input type="email" id="email" name="email" placeholder="E-mail" required
-                                class="w-full h-16 pl-14 pr-4 text-lg rounded-2xl border bg-white cursor-pointer font-semibold focus:text-green-700 focus:transition focus:duration-400 border-gray-300 focus:outline-none focus:cursor-text focus:ring-2 focus:ring-green-500">
+                                class="w-full h-16 pl-14 pr-4 text-lg rounded-2xl border bg-white dark:bg-[#111214] cursor-pointer font-semibold focus:text-green-700 focus:transition focus:duration-400 border-gray-300 dark:border-[#242529] focus:outline-none focus:cursor-text focus:ring-2 focus:ring-green-500 dark:text-[#f2f3f5]">
                         </div>
 
                         <!-- Senha -->
@@ -71,7 +71,7 @@
                                 class="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6">
 
                             <input type="password" id="senha" name="senha" placeholder="Senha" required
-                                class="w-full h-16 pl-14 pr-14 text-lg rounded-2xl border bg-white cursor-pointer font-semibold focus:text-green-700 focus:transition focus:duration-400 border-gray-300 focus:outline-none focus:cursor-text focus:ring-2 focus:ring-green-500">
+                                class="w-full h-16 pl-14 pr-14 text-lg rounded-2xl border bg-white dark:bg-[#111214] cursor-pointer font-semibold focus:text-green-700 focus:transition focus:duration-400 border-gray-300 dark:border-[#242529] focus:outline-none focus:cursor-text focus:ring-2 focus:ring-green-500 dark:text-[#f2f3f5]">
 
                             <img id="olhoSenha"
                                 src="{{ url_for('static', filename='icons/IconeOlhoFechado(Light).png') }}"
@@ -99,7 +99,7 @@
                     </form>
 
                     <!-- Link -->
-                    <p class="mt-6 text-sm text-gray-600">
+                    <p class="mt-6 text-sm text-gray-600 dark:text-[#b5bac1]">
 
                         Ainda não possui conta?
 
@@ -119,6 +119,7 @@
 
         <script src="{{ url_for('static', filename='js/login.js') }}"></script>
 
+        <script src="{{ url_for('static', filename='js/darkMode.js') }}" defer></script>
     </body>
 
 </body>

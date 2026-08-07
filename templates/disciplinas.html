@@ -15,35 +15,38 @@
     <title>Disciplinas</title>
 </head>
 
-<body class="min-h-screen bg-green-200">
+<body class="h-screen overflow-hidden bg-green-100 transition-colors duration-300 dark:bg-[#080809]">
 
     <!-- Layout -->
-    <main class="flex h-screen">
+    <main class="flex h-screen overflow-hidden">
 
         {% include "components/sidebar.html" %}
+
+        <section class="flex h-screen min-w-0 flex-1 flex-col overflow-hidden p-4 text-slate-800 dark:text-[#f2f3f5]">
+            {% include "components/topbar.html" %}
 
         <!-- ========================================= -->
         <!-- CONTEÚDO DA PÁGINA -->
         <!-- ========================================= -->
 
-        <section class="flex-1 p-5 flex gap-5 h-full overflow-hidden">
+        <section class="flex min-h-0 flex-1 gap-4 overflow-hidden pt-4">
 
             <!-- ========================================= -->
             <!-- ÁREA DAS DISCIPLINAS -->
             <!-- ========================================= -->
 
-            <section class="flex-1 max-h-194 bg-white rounded-3xl shadow-sm p-8 flex flex-col overflow-hidden">
+            <section class="flex min-h-0 flex-1 flex-col overflow-hidden rounded-2xl bg-white p-5 shadow-sm dark:bg-[#111214]">
 
                 <!-- Cabeçalho -->
-                <header class="flex justify-between items-center mb-8">
+                <header class="mb-4 flex items-center justify-between">
 
                     <div>
 
-                        <h1 class="text-3xl font-bold text-gray-800">
+                        <h1 class="text-3xl font-bold text-gray-800 dark:text-[#f2f3f5]">
                             Minhas Disciplinas
                         </h1>
 
-                        <p class="text-gray-500 mt-2">
+                        <p class="text-gray-500 dark:text-[#b5bac1] mt-2">
                             Organize e acompanhe todas as suas matérias.
                         </p>
 
@@ -71,7 +74,7 @@
                 <!-- APENAS ESTA ÁREA ROLA -->
                 <!-- ========================================= -->
 
-                <div class="flex-1 overflow-y-auto pr-3 flex flex-col gap-6">
+                <div class="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden">
 
 
                     <!-- ======================================================= -->
@@ -79,7 +82,7 @@
                     <!-- ======================================================= -->
 
                     <article
-                        class="bg-gray-50 hover:bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                        class="bg-gray-50 dark:bg-[#0d0d0f] hover:bg-white rounded-2xl border border-gray-200 dark:border-[#242529] shadow-sm hover:shadow-md transition">
 
                         <div class="h-3 bg-red-500 rounded-t-2xl"></div>
 
@@ -89,11 +92,11 @@
 
                                 <div>
 
-                                    <h2 class="text-2xl font-bold text-gray-800">
+                                    <h2 class="text-2xl font-bold text-gray-800 dark:text-[#f2f3f5]">
                                         Matemática
                                     </h2>
 
-                                    <p class="text-gray-500 mt-1">
+                                    <p class="text-gray-500 dark:text-[#b5bac1] mt-1">
                                         Continue em Funções.
                                     </p>
 
@@ -117,7 +120,7 @@
                     <!-- DISCIPLINA 2 (ABERTA) -->
                     <!-- ======================================================= -->
 
-                    <article class="bg-white rounded-2xl border-2 border-[#288352] shadow-md">
+                    <article class="bg-white dark:bg-[#111214] rounded-2xl border-2 border-[#288352] shadow-md">
 
                         <div class="h-3 bg-[#288352] rounded-t-2xl"></div>
 
@@ -129,13 +132,13 @@
 
                                 <div>
 
-                                    <h2 class="text-2xl font-bold text-gray-800">
+                                    <h2 class="text-2xl font-bold text-gray-800 dark:text-[#f2f3f5]">
 
                                         Programação Web
 
                                     </h2>
 
-                                    <p class="text-gray-500 mt-1">
+                                    <p class="text-gray-500 dark:text-[#b5bac1] mt-1">
 
                                         HTML • CSS • Flask
 
@@ -154,49 +157,49 @@
 
                             <!-- Notas -->
 
-                            <div class="grid grid-cols-4 gap-5 mb-8">
+                            <div class="mb-4 grid grid-cols-4 gap-3">
 
                                 <div>
 
-                                    <label class="text-sm text-gray-500">
+                                    <label class="text-sm text-gray-500 dark:text-[#b5bac1]">
                                         Nota 1
                                     </label>
 
                                     <input type="text" value="9,5"
-                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none">
+                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 dark:border-[#242529] text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none dark:bg-[#111214] dark:text-[#f2f3f5]">
 
                                 </div>
 
                                 <div>
 
-                                    <label class="text-sm text-gray-500">
+                                    <label class="text-sm text-gray-500 dark:text-[#b5bac1]">
                                         Nota 2
                                     </label>
 
                                     <input type="text" value="8,8"
-                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none">
+                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 dark:border-[#242529] text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none dark:bg-[#111214] dark:text-[#f2f3f5]">
 
                                 </div>
 
                                 <div>
 
-                                    <label class="text-sm text-gray-500">
+                                    <label class="text-sm text-gray-500 dark:text-[#b5bac1]">
                                         Nota 3
                                     </label>
 
                                     <input type="text" placeholder="-"
-                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none">
+                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 dark:border-[#242529] text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none dark:bg-[#111214] dark:text-[#f2f3f5]">
 
                                 </div>
 
                                 <div>
 
-                                    <label class="text-sm text-gray-500">
+                                    <label class="text-sm text-gray-500 dark:text-[#b5bac1]">
                                         Nota 4
                                     </label>
 
                                     <input type="text" placeholder="-"
-                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none">
+                                        class="mt-2 w-full h-11 rounded-xl border border-gray-300 dark:border-[#242529] text-center font-semibold focus:ring-2 focus:ring-[#66D279] outline-none dark:bg-[#111214] dark:text-[#f2f3f5]">
 
                                 </div>
 
@@ -205,11 +208,11 @@
 
                             <!-- Estatísticas -->
 
-                            <div class="grid grid-cols-3 gap-6">
+                            <div class="grid grid-cols-3 gap-3">
 
-                                <div class="bg-green-50 rounded-xl p-4">
+                                <div class="bg-green-50 dark:bg-[#0d0d0f] rounded-xl p-4">
 
-                                    <p class="text-gray-500 text-sm">
+                                    <p class="text-gray-500 dark:text-[#b5bac1] text-sm">
                                         Média
                                     </p>
 
@@ -219,9 +222,9 @@
 
                                 </div>
 
-                                <div class="bg-blue-50 rounded-xl p-4">
+                                <div class="bg-blue-50 dark:bg-[#252f3d] rounded-xl p-4">
 
-                                    <p class="text-gray-500 text-sm">
+                                    <p class="text-gray-500 dark:text-[#b5bac1] text-sm">
                                         Horas
                                     </p>
 
@@ -231,9 +234,9 @@
 
                                 </div>
 
-                                <div class="bg-orange-50 rounded-xl p-4">
+                                <div class="bg-orange-50 dark:bg-[#3b3027] rounded-xl p-4">
 
-                                    <p class="text-gray-500 text-sm">
+                                    <p class="text-gray-500 dark:text-[#b5bac1] text-sm">
                                         Pomodoros
                                     </p>
 
@@ -256,7 +259,7 @@
                     <!-- ======================================================= -->
 
                     <article
-                        class="bg-gray-50 hover:bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                        class="bg-gray-50 dark:bg-[#0d0d0f] hover:bg-white rounded-2xl border border-gray-200 dark:border-[#242529] shadow-sm hover:shadow-md transition">
 
                         <div class="h-3 bg-blue-500 rounded-t-2xl"></div>
 
@@ -266,13 +269,13 @@
 
                                 <div>
 
-                                    <h2 class="text-2xl font-bold text-gray-800">
+                                    <h2 class="text-2xl font-bold text-gray-800 dark:text-[#f2f3f5]">
 
                                         História
 
                                     </h2>
 
-                                    <p class="text-gray-500 mt-1">
+                                    <p class="text-gray-500 dark:text-[#b5bac1] mt-1">
 
                                         Revolução Industrial.
 
@@ -302,17 +305,17 @@
             <!-- PAINEL DE ESTATÍSTICAS -->
             <!-- ========================================= -->
 
-            <aside class="w-80 bg-white max-h-194 rounded-3xl shadow-sm p-8 flex flex-col gap-6">
+            <aside class="flex h-full w-72 flex-col gap-4 overflow-hidden rounded-2xl bg-white p-5 shadow-sm dark:bg-[#111214]">
 
-                <h2 class="text-2xl font-bold text-gray-800">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-[#f2f3f5]">
 
                     Resumo
 
                 </h2>
 
-                <div class="bg-green-50 rounded-2xl p-5">
+                <div class="bg-green-50 dark:bg-[#0d0d0f] rounded-2xl p-5">
 
-                    <p class="text-gray-500">
+                    <p class="text-gray-500 dark:text-[#b5bac1]">
                         Disciplinas
                     </p>
 
@@ -322,9 +325,9 @@
 
                 </div>
 
-                <div class="bg-blue-50 rounded-2xl p-5">
+                <div class="bg-blue-50 dark:bg-[#252f3d] rounded-2xl p-5">
 
-                    <p class="text-gray-500">
+                    <p class="text-gray-500 dark:text-[#b5bac1]">
                         Horas estudadas
                     </p>
 
@@ -334,9 +337,9 @@
 
                 </div>
 
-                <div class="bg-orange-50 rounded-2xl p-5">
+                <div class="bg-orange-50 dark:bg-[#3b3027] rounded-2xl p-5">
 
-                    <p class="text-gray-500">
+                    <p class="text-gray-500 dark:text-[#b5bac1]">
                         Média geral
                     </p>
 
@@ -346,9 +349,9 @@
 
                 </div>
 
-                <div class="bg-red-50 rounded-2xl p-5">
+                <div class="bg-red-50 dark:bg-[#35272a] rounded-2xl p-5">
 
-                    <p class="text-gray-500">
+                    <p class="text-gray-500 dark:text-[#b5bac1]">
                         Pomodoros
                     </p>
 
@@ -358,13 +361,13 @@
 
                 </div>
 
-                <div class="mt-auto bg-gray-50 rounded-2xl p-5">
+                <div class="mt-auto bg-gray-50 dark:bg-[#0d0d0f] rounded-2xl p-5">
 
-                    <h3 class="font-semibold text-gray-700 mb-2">
+                    <h3 class="font-semibold text-gray-700 dark:text-[#dbdee1] mb-2">
                         Próxima meta
                     </h3>
 
-                    <p class="text-gray-500 text-sm">
+                    <p class="text-gray-500 dark:text-[#b5bac1] text-sm">
                         Estudar mais <strong>6 horas</strong> esta semana para atingir sua meta semanal.
                     </p>
 
@@ -373,7 +376,7 @@
             </aside>
 
         </section>
-
+        </section>
     </main>
-
+</body>
 </html>

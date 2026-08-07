@@ -15,11 +15,14 @@
     <title>Relogio</title>
 </head>
 
-<body class="min-h-screen bg-linear-to-br from-[#d1fad8] to-[#bbf7d0] font-sans text-gray-800 selection:bg-green-300">
+<body class="min-h-screen bg-linear-to-br from-[#d1fad8] to-[#bbf7d0] font-sans text-gray-800 transition-colors duration-300 selection:bg-green-300 dark:from-[#080809] dark:to-[#111214] dark:text-[#f2f3f5]">
 
     <main class="flex h-screen overflow-hidden">
 
         {% include "components/sidebar.html" %}
+
+        <section class="min-w-0 flex-1 overflow-y-auto p-4 text-slate-800 dark:text-[#f2f3f5]">
+            {% include "components/topbar.html" %}
 
         <div class="flex-1 p-6 md:p-10 overflow-y-auto flex items-center justify-center">
 
@@ -29,17 +32,17 @@
 
                     <div class="flex flex-col items-center gap-6 w-full">
 
-                        <div class="bg-white/60 p-1.5 rounded-full inline-flex shadow-sm backdrop-blur-md">
+                        <div class="bg-white/60 dark:bg-[#111214]/80 p-1.5 rounded-full inline-flex shadow-sm backdrop-blur-md">
 
                             <button
-                                class="bg-[#a7f3d0] text-[#064e3b] font-bold text-sm rounded-full px-8 py-2.5 shadow-sm transition-all">
+                                class="bg-[#a7f3d0] dark:bg-[#29443a] text-[#064e3b] dark:text-emerald-300 font-bold text-sm rounded-full px-8 py-2.5 shadow-sm transition-all">
 
                                 Relógio
 
                             </button>
 
                             <button
-                                class="text-gray-500 font-semibold text-sm rounded-full px-8 py-2.5 hover:bg-white/50 transition-all">
+                                class="text-gray-500 dark:text-[#b5bac1] font-semibold text-sm rounded-full px-8 py-2.5 hover:bg-white/50 transition-all">
 
                                 Pomodoro
 
@@ -52,7 +55,7 @@
                             <div class="relative flex-1 min-w-50">
 
                                 <select
-                                    class="w-full appearance-none bg-white rounded-2xl px-6 py-3.5 text-gray-700 font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-[#34d399] cursor-pointer">
+                                    class="w-full appearance-none bg-white dark:bg-[#111214] rounded-2xl px-6 py-3.5 text-gray-700 dark:text-[#dbdee1] font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-[#34d399] cursor-pointer dark:border-[#242529]">
 
                                     <option>Matemática</option>
 
@@ -64,7 +67,7 @@
 
                                 <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
 
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                    <svg class="w-5 h-5 text-gray-500 dark:text-[#b5bac1]" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M19 9l-7 7-7-7"></path>
@@ -77,13 +80,13 @@
                             <div class="flex gap-2 min-w-37.5">
 
                                 <input type="number" value="45"
-                                    class="w-20 bg-white rounded-2xl px-4 py-3.5 text-center text-gray-700 font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-[#34d399]">
+                                    class="w-20 bg-white dark:bg-[#111214] rounded-2xl px-4 py-3.5 text-center text-gray-700 dark:text-[#dbdee1] font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-[#34d399] dark:border-[#242529]">
 
                                 <div class="relative flex-1">
 
 
                                     <select
-                                        class="w-28 appearance-none bg-[#a7f3d0] text-[#064e3b] rounded-2xl px-4 py-3.5 font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-[#34d399] cursor-pointer">
+                                        class="w-28 appearance-none bg-[#a7f3d0] dark:bg-[#29443a] text-[#064e3b] dark:text-emerald-300 rounded-2xl px-4 py-3.5 font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-[#34d399] cursor-pointer dark:border-[#242529]">
 
                                         <option>Minutos</option>
 
@@ -93,7 +96,7 @@
 
                                     <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
 
-                                        <svg class="w-4 h-4 text-[#064e3b]" fill="none" stroke="currentColor"
+                                        <svg class="w-4 h-4 text-[#064e3b] dark:text-emerald-300" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 9l-7 7-7-7"></path>
@@ -110,20 +113,20 @@
                     </div>
 
                     <div
-                        class="bg-white rounded-[3.5rem] w-full max-w-3xl p-10 md:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col items-center justify-center border border-white/50 relative overflow-hidden">
+                        class="bg-white dark:bg-[#111214] rounded-[3.5rem] w-full max-w-3xl p-10 md:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col items-center justify-center border border-white/50 relative overflow-hidden">
 
-                        <div class="absolute -top-24 -right-24 w-64 h-64 bg-green-50 rounded-full blur-3xl opacity-60">
+                        <div class="absolute -top-24 -right-24 w-64 h-64 bg-green-50 dark:bg-[#0d0d0f] rounded-full blur-3xl opacity-60">
                         </div>
 
                         <div
-                            class="text-[7rem] sm:text-[9rem] md:text-[11rem] font-bold text-[#14532d] leading-none tracking-tighter tabular-nums drop-shadow-sm z-10">
+                            class="text-[7rem] sm:text-[9rem] md:text-[11rem] font-bold text-[#14532d] dark:text-emerald-300 leading-none tracking-tighter tabular-nums drop-shadow-sm z-10">
                             45:00
                         </div>
 
                         <div class="flex flex-wrap justify-center gap-4 mt-10 z-10">
 
                             <button
-                                class="bg-[#d1fae5] hover:bg-[#a7f3d0] text-[#065f46] font-bold py-3.5 px-8 rounded-full transition-all flex items-center gap-2">
+                                class="bg-[#d1fae5] dark:bg-[#263c32] hover:bg-[#a7f3d0] text-[#065f46] font-bold py-3.5 px-8 rounded-full transition-all flex items-center gap-2">
 
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
@@ -149,7 +152,7 @@
                             </button>
 
                             <button
-                                class="bg-[#d1fae5] hover:bg-[#a7f3d0] text-[#065f46] font-bold py-3.5 px-8 rounded-full transition-all flex items-center gap-2">
+                                class="bg-[#d1fae5] dark:bg-[#263c32] hover:bg-[#a7f3d0] text-[#065f46] font-bold py-3.5 px-8 rounded-full transition-all flex items-center gap-2">
 
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
@@ -169,22 +172,22 @@
                 <div class="xl:col-span-4 w-full h-137.5 flex flex-col">
 
                     <div
-                        class="bg-white/60 backdrop-blur-xl rounded-[2.5rem] p-8 shadow-sm border border-white h-full flex flex-col">
+                        class="bg-white/60 dark:bg-[#111214]/80 backdrop-blur-xl rounded-[2.5rem] p-8 shadow-sm border border-white dark:border-[#242529] h-full flex flex-col">
 
-                        <div class="bg-[#bbf7d0] rounded-2xl py-3.5 px-6 mb-6 shadow-inner text-center">
+                        <div class="bg-[#bbf7d0] dark:bg-[#263c32] rounded-2xl py-3.5 px-6 mb-6 shadow-inner text-center">
 
-                            <h2 class="text-[#064e3b] font-bold text-lg tracking-wide uppercase">Histórico Rápido</h2>
+                            <h2 class="text-[#064e3b] dark:text-emerald-300 font-bold text-lg tracking-wide uppercase">Histórico Rápido</h2>
 
                         </div>
 
                         <div class="flex flex-col gap-4 overflow-y-auto pr-2 custom-scrollbar">
 
                             <div
-                                class="bg-[#a7f3d0] p-5 rounded-3xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden shrink-0">
+                                class="bg-[#a7f3d0] dark:bg-[#29443a] p-5 rounded-3xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden shrink-0">
 
                                 <div class="absolute top-0 left-0 w-2 h-full bg-[#059669]"></div>
 
-                                <h3 class="font-bold text-[#064e3b] text-xl ml-2">Matemática</h3>
+                                <h3 class="font-bold text-[#064e3b] dark:text-emerald-300 text-xl ml-2">Matemática</h3>
 
                                 <p class="text-[#047857] text-sm ml-2 mt-1 font-medium">45 min <span
                                         class="mx-2 opacity-50">•</span> Hoje</p>
@@ -192,11 +195,11 @@
                             </div>
 
                             <div
-                                class="bg-[#d1fae5] p-5 rounded-3xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden shrink-0">
+                                class="bg-[#d1fae5] dark:bg-[#263c32] p-5 rounded-3xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden shrink-0">
 
                                 <div class="absolute top-0 left-0 w-2 h-full bg-[#34d399]"></div>
 
-                                <h3 class="font-bold text-[#064e3b] text-xl ml-2">Ciências</h3>
+                                <h3 class="font-bold text-[#064e3b] dark:text-emerald-300 text-xl ml-2">Ciências</h3>
 
                                 <div class="flex items-center gap-2 ml-2 mt-1">
 
@@ -212,13 +215,13 @@
                             </div>
 
                             <div
-                                class="bg-white/80 border border-[#a7f3d0] p-5 rounded-3xl shadow-sm hover:bg-white transition-colors relative overflow-hidden shrink-0">
+                                class="bg-white/80 dark:bg-[#111214]/90 border border-[#a7f3d0] p-5 rounded-3xl shadow-sm hover:bg-white transition-colors relative overflow-hidden shrink-0">
 
                                 <div class="absolute top-0 left-0 w-2 h-full bg-gray-300"></div>
 
-                                <h3 class="font-bold text-gray-700 text-xl ml-2">Programação Web</h3>
+                                <h3 class="font-bold text-gray-700 dark:text-[#dbdee1] text-xl ml-2">Programação Web</h3>
 
-                                <p class="text-gray-500 text-sm ml-2 mt-1 font-medium">1h 20m <span
+                                <p class="text-gray-500 dark:text-[#b5bac1] text-sm ml-2 mt-1 font-medium">1h 20m <span
                                         class="mx-2 opacity-50">•</span> 2 dias atrás</p>
 
                             </div>
@@ -232,7 +235,7 @@
             </div>
 
         </div>
-
+        </section>
     </main>
 
     <style>
