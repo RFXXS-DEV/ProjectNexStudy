@@ -11,72 +11,70 @@
         rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
 
-    <title>Login-NexStudy</title>
-
-
+    <title>Entrar | NexStudy</title>
 </head>
 
-<body>
-
-    <body class="transition-colors duration-300 min-h-screen dark:bg-[#080809] dark:text-[#f2f3f5]">
+<body class="min-h-screen bg-green-50 font-inter text-gray-800">
 
         <!-- Página inteira -->
-        <main class="flex min-h-screen">
+        <main class="flex min-h-screen overflow-hidden">
 
             <!-- ========================================= -->
             <!-- LADO ESQUERDO - IMAGEM -->
             <!-- ========================================= -->
-            <section class="w-1/2 h-screen">
+            <section class="hidden h-screen w-1/2 lg:block">
 
                 <img src="{{ url_for('static', filename='img/FundoLogin.jpg') }}" alt="Imagem de fundo"
-                    class="w-full h-full object-cover">
+                    class="h-full w-full object-cover">
 
             </section>
 
             <!-- ========================================= -->
             <!-- LADO DIREITO -->
             <!-- ========================================= -->
-            <section class="w-1/2 h-screen flex items-center justify-center bg-green-200 dark:bg-[#080809]">
+            <section class="flex min-h-screen w-full items-center justify-center bg-linear-to-br from-green-50 via-green-100 to-emerald-200 px-6 py-10 lg:w-1/2">
 
                 <!-- Container principal -->
-                <div class="w-full max-w-md px-0 flex flex-col items-center">
+                <div class="flex w-full max-w-md flex-col items-center rounded-3xl border border-white/80 bg-white/75 p-8 shadow-xl shadow-green-900/10 backdrop-blur-sm sm:p-10">
 
                     <!-- Logo -->
                     <img src="{{ url_for('static', filename='img/LogoNexStudy.png') }}" alt="Logo NexStudy"
-                        class="w-48 mb-0">
+                        class="mb-1 w-36 drop-shadow-sm">
 
                     <!-- Título -->
-                    <h1 class="text-6xl text-green-700 mb-4 font-dancing border-b-2">
+                    <h1 class="mb-2 text-center font-dancing text-5xl text-green-700">
                         Bem-vindo de volta
                     </h1>
+
+                    <p class="mb-7 text-center text-sm text-gray-500">Entre para continuar seus estudos.</p>
 
                     <!-- ================================= -->
                     <!-- FORMULÁRIO -->
                     <!-- ================================= -->
 
-                    <form action="" method="POST" class="w-full flex flex-col gap-3">
+                    <form action="" method="POST" class="flex w-full flex-col gap-4">
 
                         <!-- Email -->
                         <div class="relative">
                             <img src="{{ url_for('static', filename='icons/IconeEmail(Light).png') }}" alt="Ícone Email"
-                                class="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6">
+                                class="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2">
 
                             <input type="email" id="email" name="email" placeholder="E-mail" required
-                                class="w-full h-16 pl-14 pr-4 text-lg rounded-2xl border bg-white dark:bg-[#111214] cursor-pointer font-semibold focus:text-green-700 focus:transition focus:duration-400 border-gray-300 dark:border-[#242529] focus:outline-none focus:cursor-text focus:ring-2 focus:ring-green-500 dark:text-[#f2f3f5]">
+                                class="h-14 w-full rounded-2xl border border-gray-200 bg-white pl-14 pr-4 text-base font-medium shadow-sm outline-none transition placeholder:text-gray-400 focus:border-green-500 focus:ring-4 focus:ring-green-500/15">
                         </div>
 
                         <!-- Senha -->
                         <div class="relative">
                             <img src="{{ url_for('static', filename='icons/IconeSenha(Light).png') }}" alt="Ícone Senha"
-                                class="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6">
+                                class="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2">
 
                             <input type="password" id="senha" name="senha" placeholder="Senha" required
-                                class="w-full h-16 pl-14 pr-14 text-lg rounded-2xl border bg-white dark:bg-[#111214] cursor-pointer font-semibold focus:text-green-700 focus:transition focus:duration-400 border-gray-300 dark:border-[#242529] focus:outline-none focus:cursor-text focus:ring-2 focus:ring-green-500 dark:text-[#f2f3f5]">
+                                class="h-14 w-full rounded-2xl border border-gray-200 bg-white pl-14 pr-14 text-base font-medium shadow-sm outline-none transition placeholder:text-gray-400 focus:border-green-500 focus:ring-4 focus:ring-green-500/15">
 
                             <img id="olhoSenha"
                                 src="{{ url_for('static', filename='icons/IconeOlhoFechado(Light).png') }}"
                                 alt="Mostrar senha"
-                                class="absolute right-5 top-1/2 -translate-y-1/2 w-6 h-6 cursor-pointer">
+                                class="absolute right-5 top-1/2 h-5 w-5 -translate-y-1/2 cursor-pointer opacity-70 transition hover:opacity-100">
                         </div>
 
                         <!-- Esqueci minha senha -->
@@ -90,7 +88,7 @@
 
                         <!-- Botão -->
                         <button type="submit"
-                            class="w-full h-16 mt-2 text-lg rounded-2xl bg-green-700 text-white font-semibold hover:bg-green-800 transition duration-200 cursor-pointer">
+                            class="mt-2 h-14 w-full cursor-pointer rounded-2xl bg-green-700 text-base font-semibold text-white shadow-lg shadow-green-700/20 transition hover:-translate-y-0.5 hover:bg-green-800 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700">
 
                             Entrar
 
@@ -99,7 +97,7 @@
                     </form>
 
                     <!-- Link -->
-                    <p class="mt-6 text-sm text-gray-600 dark:text-[#b5bac1]">
+                    <p class="mt-6 text-sm text-gray-600">
 
                         Ainda não possui conta?
 
@@ -117,11 +115,7 @@
 
         </main>
 
-        <script src="{{ url_for('static', filename='js/login.js') }}"></script>
-
-        <script src="{{ url_for('static', filename='js/darkMode.js') }}" defer></script>
-    </body>
-
+    <script src="{{ url_for('static', filename='js/login.js') }}" defer></script>
 </body>
 
 </html>

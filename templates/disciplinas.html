@@ -52,7 +52,7 @@
 
                     </div>
 
-                    <button
+                    <button id="botao-nova-disciplina" type="button" aria-haspopup="dialog"
                         class="bg-[#66D279] hover:bg-[#55c36a] transition-all duration-200 text-white font-semibold px-6 py-3 rounded-2xl shadow hover:scale-105 flex items-center gap-2">
 
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -74,14 +74,14 @@
                 <!-- APENAS ESTA ÁREA ROLA -->
                 <!-- ========================================= -->
 
-                <div class="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden">
+                <div id="lista-disciplinas" class="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden">
 
 
                     <!-- ======================================================= -->
                     <!-- DISCIPLINA 1 (FECHADA) -->
                     <!-- ======================================================= -->
 
-                    <article
+                    <article data-cartao-disciplina data-disciplina-id="matematica"
                         class="bg-gray-50 dark:bg-[#0d0d0f] hover:bg-white rounded-2xl border border-gray-200 dark:border-[#242529] shadow-sm hover:shadow-md transition">
 
                         <div class="h-3 bg-red-500 rounded-t-2xl"></div>
@@ -102,12 +102,56 @@
 
                                 </div>
 
-                                <button class="text-[#288352] font-semibold hover:underline">
+                                <div class="flex items-center gap-2">
+                                    <button type="button" class="botao-detalhes text-[#288352] font-semibold hover:underline"
+                                        aria-expanded="false" aria-controls="detalhes-matematica">Ver detalhes</button>
+                                    <button type="button" class="botao-excluir-disciplina rounded-lg p-2 text-gray-400 transition hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-950/30"
+                                        aria-label="Excluir Matemática" title="Excluir disciplina">
+                                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-9 0h12" />
+                                        </svg>
+                                    </button>
+                                </div>
 
-                                    Ver detalhes
+                            </div>
 
-                                </button>
-
+                            <div id="detalhes-matematica" class="detalhes-disciplina hidden pt-4">
+                                <div class="mb-4 grid grid-cols-4 gap-3">
+                                    <div>
+                                        <label for="matematica-nota-1" class="text-sm text-gray-500 dark:text-[#b5bac1]">Nota 1</label>
+                                        <input id="matematica-nota-1" type="text" value="8,5"
+                                            class="mt-2 h-11 w-full rounded-xl border border-gray-300 text-center font-semibold outline-none focus:ring-2 focus:ring-[#66D279] dark:border-[#242529] dark:bg-[#111214] dark:text-[#f2f3f5]">
+                                    </div>
+                                    <div>
+                                        <label for="matematica-nota-2" class="text-sm text-gray-500 dark:text-[#b5bac1]">Nota 2</label>
+                                        <input id="matematica-nota-2" type="text" value="9,0"
+                                            class="mt-2 h-11 w-full rounded-xl border border-gray-300 text-center font-semibold outline-none focus:ring-2 focus:ring-[#66D279] dark:border-[#242529] dark:bg-[#111214] dark:text-[#f2f3f5]">
+                                    </div>
+                                    <div>
+                                        <label for="matematica-nota-3" class="text-sm text-gray-500 dark:text-[#b5bac1]">Nota 3</label>
+                                        <input id="matematica-nota-3" type="text" placeholder="-"
+                                            class="mt-2 h-11 w-full rounded-xl border border-gray-300 text-center font-semibold outline-none focus:ring-2 focus:ring-[#66D279] dark:border-[#242529] dark:bg-[#111214] dark:text-[#f2f3f5]">
+                                    </div>
+                                    <div>
+                                        <label for="matematica-nota-4" class="text-sm text-gray-500 dark:text-[#b5bac1]">Nota 4</label>
+                                        <input id="matematica-nota-4" type="text" placeholder="-"
+                                            class="mt-2 h-11 w-full rounded-xl border border-gray-300 text-center font-semibold outline-none focus:ring-2 focus:ring-[#66D279] dark:border-[#242529] dark:bg-[#111214] dark:text-[#f2f3f5]">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div class="rounded-xl bg-green-50 p-3 dark:bg-[#0d0d0f]">
+                                        <p class="text-sm text-gray-500 dark:text-[#b5bac1]">Média</p>
+                                        <h3 class="text-xl font-bold text-[#288352]">8,75</h3>
+                                    </div>
+                                    <div class="rounded-xl bg-blue-50 p-3 dark:bg-[#252f3d]">
+                                        <p class="text-sm text-gray-500 dark:text-[#b5bac1]">Horas</p>
+                                        <h3 class="text-xl font-bold text-blue-600">10h</h3>
+                                    </div>
+                                    <div class="rounded-xl bg-orange-50 p-3 dark:bg-[#3b3027]">
+                                        <p class="text-sm text-gray-500 dark:text-[#b5bac1]">Pomodoros</p>
+                                        <h3 class="text-xl font-bold text-orange-500">18</h3>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -120,7 +164,8 @@
                     <!-- DISCIPLINA 2 (ABERTA) -->
                     <!-- ======================================================= -->
 
-                    <article class="bg-white dark:bg-[#111214] rounded-2xl border-2 border-[#288352] shadow-md">
+                    {% if false %}
+                    <article data-cartao-disciplina class="bg-white dark:bg-[#111214] rounded-2xl border-2 border-[#288352] shadow-md">
 
                         <div class="h-3 bg-[#288352] rounded-t-2xl"></div>
 
@@ -146,7 +191,8 @@
 
                                 </div>
 
-                                <button class="text-[#288352] font-semibold hover:underline">
+                                <button type="button" class="botao-detalhes text-[#288352] font-semibold hover:underline"
+                                    aria-expanded="true" aria-controls="detalhes-programacao-web">
 
                                     Ocultar detalhes
 
@@ -154,6 +200,8 @@
 
                             </div>
 
+
+                            <div id="detalhes-programacao-web" class="detalhes-disciplina">
 
                             <!-- Notas -->
 
@@ -205,7 +253,6 @@
 
                             </div>
 
-
                             <!-- Estatísticas -->
 
                             <div class="grid grid-cols-3 gap-3">
@@ -248,9 +295,12 @@
 
                             </div>
 
+                            </div>
+
                         </div>
 
                     </article>
+                    {% endif %}
 
 
 
@@ -258,7 +308,7 @@
                     <!-- DISCIPLINA 3 (FECHADA) -->
                     <!-- ======================================================= -->
 
-                    <article
+                    <article data-cartao-disciplina data-disciplina-id="historia"
                         class="bg-gray-50 dark:bg-[#0d0d0f] hover:bg-white rounded-2xl border border-gray-200 dark:border-[#242529] shadow-sm hover:shadow-md transition">
 
                         <div class="h-3 bg-blue-500 rounded-t-2xl"></div>
@@ -283,12 +333,56 @@
 
                                 </div>
 
-                                <button class="text-[#288352] font-semibold hover:underline">
+                                <div class="flex items-center gap-2">
+                                    <button type="button" class="botao-detalhes text-[#288352] font-semibold hover:underline"
+                                        aria-expanded="false" aria-controls="detalhes-historia">Ver detalhes</button>
+                                    <button type="button" class="botao-excluir-disciplina rounded-lg p-2 text-gray-400 transition hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-950/30"
+                                        aria-label="Excluir História" title="Excluir disciplina">
+                                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-9 0h12" />
+                                        </svg>
+                                    </button>
+                                </div>
 
-                                    Ver detalhes
+                            </div>
 
-                                </button>
-
+                            <div id="detalhes-historia" class="detalhes-disciplina hidden pt-4">
+                                <div class="mb-4 grid grid-cols-4 gap-3">
+                                    <div>
+                                        <label for="historia-nota-1" class="text-sm text-gray-500 dark:text-[#b5bac1]">Nota 1</label>
+                                        <input id="historia-nota-1" type="text" value="7,8"
+                                            class="mt-2 h-11 w-full rounded-xl border border-gray-300 text-center font-semibold outline-none focus:ring-2 focus:ring-[#66D279] dark:border-[#242529] dark:bg-[#111214] dark:text-[#f2f3f5]">
+                                    </div>
+                                    <div>
+                                        <label for="historia-nota-2" class="text-sm text-gray-500 dark:text-[#b5bac1]">Nota 2</label>
+                                        <input id="historia-nota-2" type="text" value="8,4"
+                                            class="mt-2 h-11 w-full rounded-xl border border-gray-300 text-center font-semibold outline-none focus:ring-2 focus:ring-[#66D279] dark:border-[#242529] dark:bg-[#111214] dark:text-[#f2f3f5]">
+                                    </div>
+                                    <div>
+                                        <label for="historia-nota-3" class="text-sm text-gray-500 dark:text-[#b5bac1]">Nota 3</label>
+                                        <input id="historia-nota-3" type="text" placeholder="-"
+                                            class="mt-2 h-11 w-full rounded-xl border border-gray-300 text-center font-semibold outline-none focus:ring-2 focus:ring-[#66D279] dark:border-[#242529] dark:bg-[#111214] dark:text-[#f2f3f5]">
+                                    </div>
+                                    <div>
+                                        <label for="historia-nota-4" class="text-sm text-gray-500 dark:text-[#b5bac1]">Nota 4</label>
+                                        <input id="historia-nota-4" type="text" placeholder="-"
+                                            class="mt-2 h-11 w-full rounded-xl border border-gray-300 text-center font-semibold outline-none focus:ring-2 focus:ring-[#66D279] dark:border-[#242529] dark:bg-[#111214] dark:text-[#f2f3f5]">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div class="rounded-xl bg-green-50 p-3 dark:bg-[#0d0d0f]">
+                                        <p class="text-sm text-gray-500 dark:text-[#b5bac1]">Média</p>
+                                        <h3 class="text-xl font-bold text-[#288352]">8,1</h3>
+                                    </div>
+                                    <div class="rounded-xl bg-blue-50 p-3 dark:bg-[#252f3d]">
+                                        <p class="text-sm text-gray-500 dark:text-[#b5bac1]">Horas</p>
+                                        <h3 class="text-xl font-bold text-blue-600">8h</h3>
+                                    </div>
+                                    <div class="rounded-xl bg-orange-50 p-3 dark:bg-[#3b3027]">
+                                        <p class="text-sm text-gray-500 dark:text-[#b5bac1]">Pomodoros</p>
+                                        <h3 class="text-xl font-bold text-orange-500">12</h3>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -378,5 +472,61 @@
         </section>
         </section>
     </main>
+
+    <dialog id="modal-nova-disciplina"
+        class="m-auto w-[min(92vw,34rem)] rounded-3xl border border-green-200 bg-white p-0 text-gray-800 shadow-2xl backdrop:bg-black/60 backdrop:backdrop-blur-sm dark:border-[#242529] dark:bg-[#111214] dark:text-[#f2f3f5]">
+        <form id="formulario-nova-disciplina" class="p-7 sm:p-8">
+            <header class="mb-7 flex items-start justify-between gap-4">
+                <div>
+                    <p class="mb-1 text-sm font-semibold uppercase tracking-wider text-[#288352] dark:text-[#66D279]">
+                        Nova disciplina
+                    </p>
+                    <h2 class="text-2xl font-bold">Adicione uma matéria</h2>
+                    <p class="mt-1 text-sm text-gray-500 dark:text-[#b5bac1]">
+                        Escolha um nome e uma cor para identificá-la.
+                    </p>
+                </div>
+
+                <button id="botao-fechar-modal" type="button" aria-label="Fechar"
+                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gray-100 text-xl text-gray-500 transition hover:bg-gray-200 hover:text-gray-800 dark:bg-[#1a1a1d] dark:text-[#b5bac1] dark:hover:text-white">
+                    &times;
+                </button>
+            </header>
+
+            <div class="mb-6">
+                <label for="nome-disciplina" class="mb-2 block text-sm font-semibold">Nome da disciplina</label>
+                <input id="nome-disciplina" name="nomeDisciplina" type="text" maxlength="40" required
+                    autocomplete="off" placeholder="Ex.: Física"
+                    class="h-14 w-full rounded-2xl border border-gray-300 bg-white px-4 font-medium outline-none transition placeholder:text-gray-400 focus:border-[#288352] focus:ring-4 focus:ring-green-500/15 dark:border-[#242529] dark:bg-[#0d0d0f] dark:text-[#f2f3f5]">
+                <p id="erro-nome-disciplina" class="mt-2 hidden text-sm font-medium text-red-500" role="alert"></p>
+            </div>
+
+            <fieldset class="mb-7">
+                <legend class="mb-3 text-sm font-semibold">Cor da disciplina</legend>
+                <div class="flex flex-wrap gap-3" aria-label="Selecione uma cor">
+                    <label class="cursor-pointer"><input class="peer sr-only" type="radio" name="corDisciplina" value="azul" checked><span class="block h-9 w-9 rounded-full bg-blue-500 ring-offset-2 transition hover:scale-110 peer-checked:ring-3 peer-checked:ring-blue-500 dark:ring-offset-[#111214]"></span></label>
+                    <label class="cursor-pointer"><input class="peer sr-only" type="radio" name="corDisciplina" value="verde"><span class="block h-9 w-9 rounded-full bg-green-500 ring-offset-2 transition hover:scale-110 peer-checked:ring-3 peer-checked:ring-green-500 dark:ring-offset-[#111214]"></span></label>
+                    <label class="cursor-pointer"><input class="peer sr-only" type="radio" name="corDisciplina" value="roxo"><span class="block h-9 w-9 rounded-full bg-purple-500 ring-offset-2 transition hover:scale-110 peer-checked:ring-3 peer-checked:ring-purple-500 dark:ring-offset-[#111214]"></span></label>
+                    <label class="cursor-pointer"><input class="peer sr-only" type="radio" name="corDisciplina" value="amarelo"><span class="block h-9 w-9 rounded-full bg-yellow-400 ring-offset-2 transition hover:scale-110 peer-checked:ring-3 peer-checked:ring-yellow-400 dark:ring-offset-[#111214]"></span></label>
+                    <label class="cursor-pointer"><input class="peer sr-only" type="radio" name="corDisciplina" value="vermelho"><span class="block h-9 w-9 rounded-full bg-red-500 ring-offset-2 transition hover:scale-110 peer-checked:ring-3 peer-checked:ring-red-500 dark:ring-offset-[#111214]"></span></label>
+                    <label class="cursor-pointer"><input class="peer sr-only" type="radio" name="corDisciplina" value="laranja"><span class="block h-9 w-9 rounded-full bg-orange-500 ring-offset-2 transition hover:scale-110 peer-checked:ring-3 peer-checked:ring-orange-500 dark:ring-offset-[#111214]"></span></label>
+                    <label class="cursor-pointer"><input class="peer sr-only" type="radio" name="corDisciplina" value="marrom"><span class="block h-9 w-9 rounded-full bg-amber-800 ring-offset-2 transition hover:scale-110 peer-checked:ring-3 peer-checked:ring-amber-800 dark:ring-offset-[#111214]"></span></label>
+                </div>
+            </fieldset>
+
+            <div class="flex justify-end gap-3 border-t border-gray-200 pt-5 dark:border-[#242529]">
+                <button id="botao-cancelar-disciplina" type="button"
+                    class="h-12 rounded-xl border border-gray-300 px-5 font-semibold transition hover:bg-gray-50 dark:border-[#242529] dark:hover:bg-[#1a1a1d]">
+                    Cancelar
+                </button>
+                <button type="submit"
+                    class="h-12 rounded-xl bg-[#288352] px-6 font-semibold text-white shadow-lg shadow-green-800/15 transition hover:-translate-y-0.5 hover:bg-[#216840]">
+                    Criar disciplina
+                </button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="{{ url_for('static', filename='js/disciplinas.js') }}" defer></script>
 </body>
 </html>

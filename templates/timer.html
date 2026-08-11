@@ -12,7 +12,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
-    <title>Relogio</title>
+    <title>Timer</title>
 </head>
 
 <body class="min-h-screen bg-linear-to-br from-[#d1fad8] to-[#bbf7d0] font-sans text-gray-800 transition-colors duration-300 selection:bg-green-300 dark:from-[#080809] dark:to-[#111214] dark:text-[#f2f3f5]">
@@ -34,19 +34,19 @@
 
                         <div class="bg-white/60 dark:bg-[#111214]/80 p-1.5 rounded-full inline-flex shadow-sm backdrop-blur-md">
 
-                            <button
+                            <a href="{{ url_for('timer') }}" aria-current="page"
                                 class="bg-[#a7f3d0] dark:bg-[#29443a] text-[#064e3b] dark:text-emerald-300 font-bold text-sm rounded-full px-8 py-2.5 shadow-sm transition-all">
 
                                 Relógio
 
-                            </button>
+                            </a>
 
-                            <button
+                            <a href="{{ url_for('pomodoro') }}"
                                 class="text-gray-500 dark:text-[#b5bac1] font-semibold text-sm rounded-full px-8 py-2.5 hover:bg-white/50 transition-all">
 
                                 Pomodoro
 
-                            </button>
+                            </a>
 
                         </div>
 
@@ -60,8 +60,6 @@
                                     <option>Matemática</option>
 
                                     <option>História</option>
-
-                                    <option>Programação Web</option>
 
                                 </select>
 
@@ -256,6 +254,7 @@
             background: #34d399;
         }
     </style>
+    <script src="{{ url_for('static', filename='js/timer.js') }}" defer></script>
 </body>
 
 </html>

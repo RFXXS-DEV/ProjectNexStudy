@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template, url_for
 
 app = Flask(__name__)
 
@@ -14,21 +14,25 @@ def login():
 def cadastro():
     return render_template("cadastro.html")
 
+@app.route("/logout")
+def logout():
+    return redirect(url_for("login"))
+
 @app.route("/dashboard")
 def dashboard():
     return render_template("dashboard.html")
-
-@app.route("/disciplina")
-def disciplina():
-    return render_template("disciplina.html")
 
 @app.route("/disciplinas")
 def disciplinas():
     return render_template("disciplinas.html")
 
-@app.route("/relogio")
-def relogio():
-    return render_template("relogio.html")
+@app.route("/timer")
+def timer():
+    return render_template("timer.html")
+
+@app.route("/pomodoro")
+def pomodoro():
+    return render_template("pomodoro.html")
 
 @app.route("/configuracoes")
 def configuracoes():
@@ -36,7 +40,7 @@ def configuracoes():
 
 @app.route("/ajuda")
 def ajuda():
-    return render_template("relogio2.html")
+    return render_template("ajuda.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

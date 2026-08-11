@@ -1,0 +1,1 @@
+// Controles do timer personalizado.
