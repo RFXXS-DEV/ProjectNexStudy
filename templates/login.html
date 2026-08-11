@@ -52,16 +52,18 @@
                     <!-- FORMULÁRIO -->
                     <!-- ================================= -->
 
-                    <form action="" method="POST" class="flex w-full flex-col gap-4">
+                    <form id="formulario-login" action="" method="POST" class="flex w-full flex-col gap-3" novalidate>
 
                         <!-- Email -->
                         <div class="relative">
                             <img src="{{ url_for('static', filename='icons/IconeEmail(Light).png') }}" alt="Ícone Email"
                                 class="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2">
 
-                            <input type="email" id="email" name="email" placeholder="E-mail" required
+                            <input type="email" id="email" name="email" placeholder="E-mail" required autocomplete="email"
+                                aria-describedby="erro-email"
                                 class="h-14 w-full rounded-2xl border border-gray-200 bg-white pl-14 pr-4 text-base font-medium shadow-sm outline-none transition placeholder:text-gray-400 focus:border-green-500 focus:ring-4 focus:ring-green-500/15">
                         </div>
+                        <p id="erro-email" class="hidden px-2 text-sm font-medium text-red-500" role="alert"></p>
 
                         <!-- Senha -->
                         <div class="relative">
@@ -69,26 +71,33 @@
                                 class="absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2">
 
                             <input type="password" id="senha" name="senha" placeholder="Senha" required
+                                autocomplete="current-password" aria-describedby="erro-senha"
                                 class="h-14 w-full rounded-2xl border border-gray-200 bg-white pl-14 pr-14 text-base font-medium shadow-sm outline-none transition placeholder:text-gray-400 focus:border-green-500 focus:ring-4 focus:ring-green-500/15">
 
-                            <img id="olhoSenha"
-                                src="{{ url_for('static', filename='icons/IconeOlhoFechado(Light).png') }}"
-                                alt="Mostrar senha"
-                                class="absolute right-5 top-1/2 h-5 w-5 -translate-y-1/2 cursor-pointer opacity-70 transition hover:opacity-100">
+                            <button id="olhoSenha" type="button" aria-label="Mostrar senha" aria-pressed="false"
+                                class="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full opacity-70 transition hover:bg-green-50 hover:opacity-100 focus-visible:outline-2 focus-visible:outline-green-700">
+                                <img id="iconeOlhoSenha"
+                                    src="{{ url_for('static', filename='icons/IconeOlhoFechado(Light).png') }}"
+                                    alt="" class="h-5 w-5">
+                            </button>
                         </div>
+                        <p id="erro-senha" class="hidden px-2 text-sm font-medium text-red-500" role="alert"></p>
 
                         <!-- Esqueci minha senha -->
                         <div class="flex justify-end">
-                            <a href="#" class="text-sm text-green-800 font-semibold hover:underline">
+                            <a id="recuperar-senha" href="#" class="text-sm text-green-800 font-semibold hover:underline">
 
                                 Esqueci minha senha
 
                             </a>
                         </div>
 
+                        <p id="status-login" class="hidden rounded-xl bg-green-50 px-4 py-3 text-center text-sm font-medium text-green-800"
+                            role="status" aria-live="polite"></p>
+
                         <!-- Botão -->
-                        <button type="submit"
-                            class="mt-2 h-14 w-full cursor-pointer rounded-2xl bg-green-700 text-base font-semibold text-white shadow-lg shadow-green-700/20 transition hover:-translate-y-0.5 hover:bg-green-800 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700">
+                        <button id="botao-entrar" type="submit"
+                            class="mt-2 h-14 w-full cursor-pointer rounded-2xl bg-green-700 text-base font-semibold text-white shadow-lg shadow-green-700/20 transition hover:-translate-y-0.5 hover:bg-green-800 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 disabled:cursor-wait disabled:opacity-70">
 
                             Entrar
 

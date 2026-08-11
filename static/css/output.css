@@ -298,9 +298,6 @@
   .right-3 {
     right: calc(var(--spacing) * 3);
   }
-  .right-5 {
-    right: calc(var(--spacing) * 5);
-  }
   .left-0 {
     left: 0px;
   }
